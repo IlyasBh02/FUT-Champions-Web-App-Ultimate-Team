@@ -32,8 +32,8 @@
 
         <div class="relative flex items-center justify-around h-full ">
             <img src="/images/stadium_background.png" alt="" class="w-2/4 rounded-lg shadow-lg">
-                <div class="bg-black w-[25%] h-[75%] rounded-md p-4 pt-0">
-                    <h2 class="text-white text-2xl text-center p-2">Team</h2>
+                <div class="bg-black w-[20%] h-[80%] rounded-md p-4 pt-0">
+                    <h2 class="text-white text-2xl text-center p-2">Ajouter un Joueur </h2>
                     <hr class="border-t-2 border-white">
                     <form id="player" class="w-[75%] mx-2 " >
                         <div class="">
@@ -42,7 +42,7 @@
                         </div>
                         <div>
                             <label for="league" class="block text-white text-sm font-medium">Ligue</label>
-                            <select id="league" class="mt-1 p-2 w-[85%] bg-zinc-400 rounded-md">
+                            <select id="league" class="mt-1 p-2 w-[85%] rounded-md">
                                 <option value="Premier League">Premier Leauge</option>
                                 <option value="La Liga">La Liga</option>
                                 <option value="Bundesliga">Bundesliga</option>
@@ -54,7 +54,7 @@
 
                         <div>
                             <label for="position" class="block text-white text-sm font-medium">position</label>
-                                <select id="position" class="mt-1 p-2 w-[85%] bg-zinc-400 rounded-md">
+                                <select id="position" class="mt-1 p-2 w-[85%] rounded-md">
                                     <option value="GK">Goalkeeper</option>
                                     <option value="CB">Center Back</option>
                                     <option value="CB">Center Back</option>
@@ -72,28 +72,36 @@
                         <div class="grid grid-cols-2 w-[85%] gap-4">
                             <div>
                                 <label for="pass" class="block text-white text-sm font-medium">PAC</label>
-                                <input id="PAC" type="number" min="1" max="100" placeholder="Pass" class="mt-1 p-2 w-[85%] bg-zinc-400 rounded-md">
+                                <input id="PAC" type="number" min="1" max="100" placeholder="Pass" class="mt-1 p-2 w-[85%] rounded-md">
                             </div>
                             <div>
                                 <label for="SHO" class="block text-white text-sm font-medium">SHO</label>
-                                <input id="SHO" type="number" min="1" max="100" placeholder="Pass" class="mt-1 p-2 w-[85%] bg-zinc-400 rounded-md">
+                                <input id="SHO" type="number" min="1" max="100" placeholder="SHO" class="mt-1 p-2 w-[85%] rounded-md">
                             </div>
                             <div>
                                 <label for="PAS" class="block text-white text-sm font-medium">PAS</label>
-                                <input id="PAS" type="number" min="1" max="100" placeholder="Pass" class="mt-1 p-2 w-[85%] bg-zinc-400 rounded-md">
+                                <input id="PAS" type="number" min="1" max="100" placeholder="PAS" class="mt-1 p-2 w-[85%] rounded-md">
                             </div>
                             <div>
                                 <label for="DRI" class="block text-white text-sm font-medium">DRI</label>
-                                <input id="DRI" type="number" min="1" max="100" placeholder="Pass" class="mt-1 p-2 w-[85%] bg-zinc-400 rounded-md">
+                                <input id="DRI" type="number" min="1" max="100" placeholder="DRI" class="mt-1 p-2 w-[85%] rounded-md">
                             </div>
                             <div>
                                 <label for="DEF" class="block text-white text-sm font-medium">DEF</label>
-                                <input id="DEF" type="number" min="1" max="100" placeholder="Pass" class="mt-1 p-2 w-[85%] bg-zinc-400 rounded-md">
+                                <input id="DEF" type="number" min="1" max="100" placeholder="DEF" class="mt-1 p-2 w-[85%] rounded-md">
                             </div>
                             <div>
                                 <label for="PHY" class="block text-white text-sm font-medium">PHY</label>
-                                <input id="PHY" type="number" min="1" max="100" placeholder="Pass" class="mt-1 p-2 w-[85%] bg-zinc-400 rounded-md">
+                                <input id="PHY" type="number" min="1" max="100" placeholder="PHY" class="mt-1 p-2 w-[85%] rounded-md">
                             </div>
+                        </div>
+                        <div class="flex ">
+                            <button type="button" id="AddPlayer" class="w-[40%] bg-zinc-400 hover:bg-green-500 text-white font-bold my-4 mr-2 py-2 px-4 rounded">
+                                Add
+                            </button>
+                            <button type="button" id="Cansel" class="w-[40%] bg-zinc-400 hover:bg-red-500 text-white font-bold my-4 ml-2 py-2 px-4 rounded">
+                                Cansel
+                            </button>
                         </div>
                     </form>
                 </div>
