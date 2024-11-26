@@ -4,6 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./output.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet", href="https://fonts.googleapis.com/css?family=Saira+Semi+Condensed:300,400,700">
     <title>Team</title>
 </head>
 
@@ -16,23 +18,84 @@
                 <ul id="listNavbar" class="w-full h-full flex items-center justify-center gap-20 text-white font-medium max-lg:fixed max-lg:top-[75px] max-lg:right-0 max-lg:h-[88vh] max-lg:bg-titleColor  max-lg:flex-col max-lg:gap-12 max-lg:text-white max-lg:w-0 max-lg:overflow-hidden transition-all duration-400">
                     <li><a class="hover:text-green-500" href="index.html">Home</a></li>
                     <li><a class="hover:text-green-500" href="player.html">Player</a></li>
-                    <li><a class="hover:text-green-500" href="#">Team Builder</a></li>
+                    <li><a class="hover:text-green-500" href="TeamBuilder.html">Team Builder</a></li>
                     <li><a class="hover:text-green-500" href="#">About</a></li>
                 </ul>
             </div>
         </div>
     </header>
 
-    <div class="relative h-full w-full">
+    <div class="relative  h-full w-full">
         <div class="absolute inset-0 bg-cover bg-center "
              style="background-image: url('/images/staduim.jpg');">
         </div>
 
-        <div class="relative flex items-center justify-around h-full">
+        <div class="relative flex items-center justify-around h-full ">
             <img src="/images/stadium_background.png" alt="" class="w-2/4 rounded-lg shadow-lg">
-                <div class="bg-black w-1/4 h-2/4">
-                    <h2 class="text-white text-2xl text-center p-2">Changement</h2>
+                <div class="bg-black w-[25%] h-[75%] rounded-md p-4 pt-0">
+                    <h2 class="text-white text-2xl text-center p-2">Team</h2>
                     <hr class="border-t-2 border-white">
+                    <form id="player" class="w-[75%] mx-2 " >
+                        <div class="">
+                            <label for="name" class=" text-white">Name du joueur</label>  
+                            <input id="name" type="text" placeholder="Player Name" class="mt-1 p-2 w-[85%] rounded-md">
+                        </div>
+                        <div>
+                            <label for="league" class="block text-white text-sm font-medium">Ligue</label>
+                            <select id="league" class="mt-1 p-2 w-[85%] bg-zinc-400 rounded-md">
+                                <option value="Premier League">Premier Leauge</option>
+                                <option value="La Liga">La Liga</option>
+                                <option value="Bundesliga">Bundesliga</option>
+                                <option value="Serie A">Serie A</option>
+                                <option value="Ligue 1">Ligue 1</option>
+                                <option value="Saudi Arabic">Saudi Arabic</option>
+                            </select>
+                        </div>
+
+                        <div>
+                            <label for="position" class="block text-white text-sm font-medium">position</label>
+                                <select id="position" class="mt-1 p-2 w-[85%] bg-zinc-400 rounded-md">
+                                    <option value="GK">Goalkeeper</option>
+                                    <option value="CB">Center Back</option>
+                                    <option value="CB">Center Back</option>
+                                    <option value="RB">Right Back</option>
+                                    <option value="LB">Left Back</option>
+                                    <option value="CDM">Central Defensive Midfielder</option>
+                                    <option value="CM">Central Midfielder</option>
+                                    <option value="CAM">Attacking Midfielder</option>
+                                    <option value="RW">Right Wing</option>
+                                    <option value="ST">Striker</option>
+                                    <option value="LW"></option>
+                                    <option value="Left Wing"></option>
+                                </select>
+                        </div>
+                        <div class="grid grid-cols-2 w-[85%] gap-4">
+                            <div>
+                                <label for="pass" class="block text-white text-sm font-medium">PAC</label>
+                                <input id="PAC" type="number" min="1" max="100" placeholder="Pass" class="mt-1 p-2 w-[85%] bg-zinc-400 rounded-md">
+                            </div>
+                            <div>
+                                <label for="SHO" class="block text-white text-sm font-medium">SHO</label>
+                                <input id="SHO" type="number" min="1" max="100" placeholder="Pass" class="mt-1 p-2 w-[85%] bg-zinc-400 rounded-md">
+                            </div>
+                            <div>
+                                <label for="PAS" class="block text-white text-sm font-medium">PAS</label>
+                                <input id="PAS" type="number" min="1" max="100" placeholder="Pass" class="mt-1 p-2 w-[85%] bg-zinc-400 rounded-md">
+                            </div>
+                            <div>
+                                <label for="DRI" class="block text-white text-sm font-medium">DRI</label>
+                                <input id="DRI" type="number" min="1" max="100" placeholder="Pass" class="mt-1 p-2 w-[85%] bg-zinc-400 rounded-md">
+                            </div>
+                            <div>
+                                <label for="DEF" class="block text-white text-sm font-medium">DEF</label>
+                                <input id="DEF" type="number" min="1" max="100" placeholder="Pass" class="mt-1 p-2 w-[85%] bg-zinc-400 rounded-md">
+                            </div>
+                            <div>
+                                <label for="PHY" class="block text-white text-sm font-medium">PHY</label>
+                                <input id="PHY" type="number" min="1" max="100" placeholder="Pass" class="mt-1 p-2 w-[85%] bg-zinc-400 rounded-md">
+                            </div>
+                        </div>
+                    </form>
                 </div>
         </div>
 
@@ -44,7 +107,6 @@
 
 
 <footer class="w-full min-h-[250px] pt-4 bg-black grid grid-cols-[30%_30%_40%] grid-rows-[80% 20%] justify-center max-lg:grid-cols-[50%_50%] max-lg:grid-rows-[auto_auto_60px] max-lg:gap-y-5">
-
     <div class="flex flex-col pl-20 max-sm:pl-5">
         <h3 class="text-white font-bold text-xl mb-5">Company</h3>
         <ul class="flex flex-col gap-3 text-[#D4D4D4] font-medium">
@@ -53,7 +115,6 @@
             <li>A propos</li>
         </ul>
     </div>
-
     <div class="flex flex-col">
         <h3 class="text-white font-bold text-xl mb-5">Payer avec</h3>
         <div class="grid grid-cols-3 w-1/2 payMethod gap-4 max-sm:justify-center max-sm:flex-wrap max-sm:w-[90%]">
@@ -65,29 +126,20 @@
             <img src="../img/bank/payu.svg" alt="payu">
         </div>
     </div>
-
-
     <div class="flex flex-col gap-y-5 max-lg:col-span-full max-lg:pl-20 max-sm:pl-5">
         <h3 class="text-white font-bold text-xl">Company</h3>
         <p class="w-[70%] text-[#D4D4D4]">
             Lorem ipsum sit amet, consectateur adispicing elit. Fusce euismod concallis velit, eu auctor lacus vehicula sit amet.
         </p>
         <div class="flex gap-3 max-sm:w-full max-sm:justify-center max-sm:pl-[-1.25rem]">
-
             <a href="#"><div class="w-14 h-14 bg-[#A6A6A6] flex justify-center items-center hover:scale-105 transition-all duration-400"><i class="fa-brands fa-facebook-f text-white text-3xl"></i></div></a>
-
             <a href="#"><div class="w-14 h-14 bg-[#A6A6A6] flex justify-center items-center hover:scale-105 transition-all duration-400"><i class="fa-brands fa-twitter text-white text-3xl"></i></div></a>
-
             <a href="#"><div class="w-14 h-14 bg-[#A6A6A6] flex justify-center items-center hover:scale-105 transition-all duration-400"><i class="fa-brands fa-linkedin text-white text-3xl"></i></div></a>
-
             <a href="#"><div class="w-14 h-14 bg-[#A6A6A6] flex justify-center items-center hover:scale-105 transition-all duration-400"><i class="fa-brands fa-github text-white text-3xl"></i></div></a>
-
         </div>
     </div>
-
     <div class="col-span-full flex justify-center items-center pt-0">
         <h6 class="text-white text-center">© 2024 Codebenders. All rights reserved</h6>
     </div>
-
 </footer>
 </html>
