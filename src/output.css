@@ -676,6 +676,14 @@ video {
   height: 3.5rem;
 }
 
+.h-1\/2 {
+  height: 50%;
+}
+
+.h-\[45px\] {
+  height: 45px;
+}
+
 .min-h-\[400px\] {
   min-height: 400px;
 }
@@ -736,6 +744,10 @@ video {
   width: 70%;
 }
 
+.w-\[50\%\] {
+  width: 50%;
+}
+
 .max-w-screen-xl {
   max-width: 1280px;
 }
@@ -760,6 +772,10 @@ video {
   flex-wrap: wrap;
 }
 
+.items-end {
+  align-items: flex-end;
+}
+
 .items-center {
   align-items: center;
 }
@@ -778,6 +794,10 @@ video {
 
 .gap-4 {
   gap: 1rem;
+}
+
+.gap-20 {
+  gap: 5rem;
 }
 
 .gap-y-5 {
@@ -812,6 +832,11 @@ video {
 
 .rounded-lg {
   border-radius: 0.5rem;
+}
+
+.rounded-t-\[20px\] {
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
 }
 
 .border-gray-200 {
@@ -862,6 +887,11 @@ video {
 .px-4 {
   padding-left: 1rem;
   padding-right: 1rem;
+}
+
+.px-\[100\] {
+  padding-left: 100;
+  padding-right: 100;
 }
 
 .pl-20 {
@@ -1014,13 +1044,44 @@ video {
   transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
 }
 
+.hover\:text-green-500:hover {
+  --tw-text-opacity: 1;
+  color: rgb(34 197 94 / var(--tw-text-opacity, 1));
+}
+
 .hover\:underline:hover {
   text-decoration-line: underline;
 }
 
+@media not all and (min-width: 1280px) {
+  .max-xl\:w-\[70\%\] {
+    width: 70%;
+  }
+}
+
 @media not all and (min-width: 1024px) {
+  .max-lg\:fixed {
+    position: fixed;
+  }
+
+  .max-lg\:right-0 {
+    right: 0px;
+  }
+
+  .max-lg\:top-\[75px\] {
+    top: 75px;
+  }
+
   .max-lg\:col-span-full {
     grid-column: 1 / -1;
+  }
+
+  .max-lg\:h-\[88vh\] {
+    height: 88vh;
+  }
+
+  .max-lg\:w-0 {
+    width: 0px;
   }
 
   .max-lg\:grid-cols-\[50\%_50\%\] {
@@ -1031,12 +1092,33 @@ video {
     grid-template-rows: auto auto 60px;
   }
 
+  .max-lg\:flex-col {
+    flex-direction: column;
+  }
+
+  .max-lg\:gap-12 {
+    gap: 3rem;
+  }
+
   .max-lg\:gap-y-5 {
     row-gap: 1.25rem;
   }
 
+  .max-lg\:overflow-hidden {
+    overflow: hidden;
+  }
+
+  .max-lg\:bg-transparent {
+    background-color: transparent;
+  }
+
   .max-lg\:pl-20 {
     padding-left: 5rem;
+  }
+
+  .max-lg\:text-white {
+    --tw-text-opacity: 1;
+    color: rgb(255 255 255 / var(--tw-text-opacity, 1));
   }
 }
 
