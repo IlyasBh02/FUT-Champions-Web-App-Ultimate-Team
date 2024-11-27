@@ -33,53 +33,39 @@
 
         <div class="relative flex items-center justify-around h-full ">
             <!------------------------------------------------------ grid ----------------------------------------------------->
-            <div class="bg-[url('/images/stadium_background.png')] h-full bg-contain  bg-no-repeat w-full rounded-lg shadow-lg">
+            <div class="bg-[url('/images/stadium_background.png')] h-full bg-contain  bg-no-repeat w-full rounded-lg shadow-lg m-[4%]">
                 <!-- <img src="/images/stadium_background.png" alt="img.staduim" class="w-full rounded-lg shadow-lg"> -->
                 <!-- Grille du terrain -->
-                <div class="grid grid-cols-3 grid-rows-4 gap-0 h-[80%] w-[80%]">
-                    <!-- Lignes et colonnes pour structurer le terrain -->
+                <div class="">
+                <!-- <div class="grid grid-cols-3 grid-rows-4 gap-0 h-[80%] w-[80%]"> -->
 
-                     <!-- Attaquants (3 joueurs) -->
-                    <div class="grid-cols-1 grid-rows-1 flex justify-center items-center bg-[url('/images/cart-1.png')] bg-contain bg-no-repeat">
-                        <button class="text-white">add</button>
-                    </div>
-                    <div class="grid-cols-3x grid-rows-1  flex justify-center items-center">
-                        <img src="/images/cart-1.png" class="w-[60%] h-[100%]" alt="">
-                    </div>
-                    <div class="grid-cols-5 grid-rows-1  flex justify-center items-center">
-                        <img src="/images/cart-1.png" class="w-[60%] h-[100%]" alt="">
+                     <!-- 3j Attaquants -->
+                    <div id="Attak" class="grid grid-rows-1 grid-cols-5 gap-20 ">
+                        <div id="LW" class="grid-cols-1 bg-[url('/images/cart-1.png')] bg-contain bg-no-repeat flex justify-center ">
+                            <button class="text-white">+</button>
+                        </div>
+                        <div id="ST" class="grid-cols-3x bg-[url('/images/cart-1.png')] bg-contain bg-no-repeat">
+                            <img src="/images/cart-1.png" alt="">
+                        </div>
+                        <div id="RW" class="grid-cols-5 bg-[url('/images/cart-1.png')] bg-contain bg-no-repeat">
+                            <img src="/images/cart-1.png" alt="">
+                        </div>
                     </div>
             
-                    <!-- Milieux de terrain (3 joueurs) -->
-                    <div class="grid-cols-1 grid-rows-2  flex justify-center items-center">
-                        <img src="/images/cart-1.png" class="w-[60%] h-[100%]" alt="">
-                    </div>
-                    <div class="grid-cols-3 grid-rows-2  flex justify-center items-center">
-                        <img src="/images/cart-1.png" class="w-[60%] h-[100%]" alt="">
-                    </div>
-                    <div class="grid-cols-5 grid-rows-2  flex justify-center items-center">
-                        <img src="/images/cart-1.png" class="w-[60%] h-[100%]" alt="">
+                    <!-- 3j Milieux de terrain -->
+                    <div>
+
                     </div>
         
-                    <!-- Défenseurs (4 joueurs) -->
-                    <div class="grid-cols-1 grid-rows-3  flex justify-center items-center">
-                        <img src="/images/cart-1.png" class="w-[60%] h-[100%]" alt="">
-                    </div>
-                    <div class="grid-cols-2 grid-rows-3  flex justify-center items-center">
-                        <img src="/images/cart-1.png" class="w-[60%] h-[100%]" alt="">
-                    </div>
-                    <div class="grid-cols-4 grid-rows-3  flex justify-center items-center">
-                        <img src="/images/cart-1.png" class="w-[60%] h-[100%]" alt="">
-                    </div>
-                    <div class="grid-cols-5 grid-rows-3  flex justify-center items-center">
-                        <img src="/images/cart-1.png" class="w-[60%] h-[100%]" alt="">
+                    <!-- 4j Défenseurs  -->
+                    <div>
+
                     </div>
         
-                    <!-- Gardien de but (positionné à une colonne et à une ligne précise) -->
-                    <div class="col-start-3 row-start-4 flex justify-center items-center">
-                        <img src="/images/cart-1.png" class="w-[60%] h-[100%]" alt="">
+                    <!-- 1j Gardien -->
+                    <div>
+
                     </div>
-                    
                 </div>
             </div>
             
@@ -232,7 +218,7 @@
 </body>
 
 
-<!-- <footer class="w-full min-h-[250px] pt-4 bg-black grid grid-cols-[30%_30%_40%] grid-rows-[80% 20%] justify-center max-lg:grid-cols-[50%_50%] max-lg:grid-rows-[auto_auto_60px] max-lg:gap-y-5">
+<footer class="w-full min-h-[250px] pt-4 bg-black grid grid-cols-[30%_30%_40%] grid-rows-[80% 20%] justify-center max-lg:grid-cols-[50%_50%] max-lg:grid-rows-[auto_auto_60px] max-lg:gap-y-5">
     <div class="flex flex-col pl-20 max-sm:pl-5">
         <h3 class="text-white font-bold text-xl mb-5">Company</h3>
         <ul class="flex flex-col gap-3 text-[#D4D4D4] font-medium">
@@ -267,5 +253,5 @@
     <div class="col-span-full flex justify-center items-center pt-0">
         <h6 class="text-white text-center">© 2024 Codebenders. All rights reserved</h6>
     </div>
-</footer> -->
+</footer>
 </html>
