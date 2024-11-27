@@ -6,6 +6,7 @@
     <link rel="stylesheet" href="./output.css">
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet", href="https://fonts.googleapis.com/css?family=Saira+Semi+Condensed:300,400,700">
+    <link rel="stylesheet" href="/style.css">
     <title>Team</title>
 </head>
 
@@ -26,8 +27,8 @@
     </header>
 
     <div class="relative  h-full w-full">
-        <div class="absolute inset-0 bg-cover bg-center "
-             style="background-image: url('/images/staduim.jpg');">
+        <div class="absolute inset-0 bg-cover bg-center blur-sm "
+             style="background-image: url('/images/staduim.jpg');class">
         </div>
 
         <div class="relative flex items-center justify-around h-full ">
@@ -71,7 +72,7 @@
                         </div>
                         <div class="grid grid-cols-2 w-[85%] gap-4">
                             <div>
-                                <label for="pass" class="block text-white text-sm font-medium">PAC</label>
+                                <label for="PAC" class="block text-white text-sm font-medium">PAC</label>
                                 <input id="PAC" type="number" min="1" max="100" placeholder="Pass" class="mt-1 p-2 w-[85%] rounded-md">
                             </div>
                             <div>
@@ -104,7 +105,61 @@
                             </button>
                         </div>
                     </form>
+
+                    
                 </div>
+                <div>
+                    <!------------------------------ card player ----------------------------------------------------->
+            <!-- Liste des joueurs -->
+            <div id="playerList" class="mt-6">
+                <h2 class="text-xl font-semibold mb-4 text-white">Liste des joueurs</h2>
+                <ul class="space-y-4">
+                  <!-- Les joueurs ajoutés apparaîtront ici -->
+                </ul>
+            </div>
+            <!-- Wrapper | For this page - !!ignore-->
+            <div class="wrapper">
+            <!-- *** fut-player-card ***-->
+                <div class="fut-player-card">
+                    <!-- Player Card Top-->
+                    <div class="player-card-top">
+                        <div class="player-master-info">
+                            <div class="player-rating"><span>00</span></div>
+                            <div class="player-position"><span>RW</span></div>
+                            <div class="player-nation"><img src="https://selimdoyranli.com/cdn/fut-player-card/img/argentina.svg" alt="Argentina" draggable="false"/></div>
+                            <div class="player-club"><img src="https://selimdoyranli.com/cdn/fut-player-card/img/barcelona.svg" alt="Barcelona" draggable="false"/></div>
+                        </div>
+                        <div class="player-picture"><img src="https://selimdoyranli.com/cdn/fut-player-card/img/messi.png" alt="Messi" draggable="false"/>
+                        </div>
+                    </div>
+                    <div class="player-card-bottom">
+                        <div class="player-info">
+                            <div class="player-name"><span>MESSI</span></div>
+                            <div class="player-features">
+                                <div class="player-features-col"><span>
+                                    <div class="player-feature-value">00</div>
+                                    <div class="player-feature-title">PAC</div></span><span>
+                                    <div class="player-feature-value">00</div>
+                                    <div class="player-feature-title">SHO</div></span><span>
+                                    <div class="player-feature-value">00</div>
+                                    <div class="player-feature-title">PAS</div></span>
+                                </div>
+                                <div class="player-features-col"><span>
+                                    <div class="player-feature-value">00</div>
+                                    <div class="player-feature-title">DRI</div></span><span>
+                                    <div class="player-feature-value">00</div>
+                                    <div class="player-feature-title">DEF</div></span><span>
+                                    <div class="player-feature-value">00</div>
+                                    <div class="player-feature-title">PHY</div></span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+                </div>
+            </div>
+            
         </div>
 
     </div>
@@ -114,7 +169,7 @@
 </body>
 
 
-<footer class="w-full min-h-[250px] pt-4 bg-black grid grid-cols-[30%_30%_40%] grid-rows-[80% 20%] justify-center max-lg:grid-cols-[50%_50%] max-lg:grid-rows-[auto_auto_60px] max-lg:gap-y-5">
+<!-- <footer class="w-full min-h-[250px] pt-4 bg-black grid grid-cols-[30%_30%_40%] grid-rows-[80% 20%] justify-center max-lg:grid-cols-[50%_50%] max-lg:grid-rows-[auto_auto_60px] max-lg:gap-y-5">
     <div class="flex flex-col pl-20 max-sm:pl-5">
         <h3 class="text-white font-bold text-xl mb-5">Company</h3>
         <ul class="flex flex-col gap-3 text-[#D4D4D4] font-medium">
@@ -149,5 +204,5 @@
     <div class="col-span-full flex justify-center items-center pt-0">
         <h6 class="text-white text-center">© 2024 Codebenders. All rights reserved</h6>
     </div>
-</footer>
+</footer> -->
 </html>
