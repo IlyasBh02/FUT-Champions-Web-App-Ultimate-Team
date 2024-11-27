@@ -36,6 +36,7 @@
     position: relative;
     width: 14rem;
     height: 20rem;
+    /* background-image: url('images/cart-1.png'); */
     background-image: url(https://selimdoyranli.com/cdn/fut-player-card/img/card_bg.png);
     background-position: center center;
     background-size: 100% 100%;

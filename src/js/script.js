@@ -29,7 +29,7 @@ addPlayerButton.addEventListener('click', () => {
     <div>
       <h3 class="font-bold text-lg">${name}</h3>
       <p>Ligue: ${league} | Nationalité: ${nationality} | Position: ${position}</p>
-      <p>Stats: Pass ${pass}, Shoot ${shoot}, Dribble ${dribble}</p>
+      <p>Stats: PAC ${PAC}, SHO ${SHO}, PAS ${PAS}, DRI ${DRI}, DEF ${DEF}, PHY ${PHY}</p>
     </div>
     <button class="bg-red-500 hover:bg-red-600 text-white font-bold py-1 px-3 rounded removePlayer">
       Supprimer
