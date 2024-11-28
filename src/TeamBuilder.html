@@ -1,82 +1,38 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./output.css">
-    <title>Team</title>
-</head>
-
-<body class="h-screen">
-    <header class="h-20 w-full bg-black flex items-center  justify-around px-4">
-        <input type="text" class="p-2 rounded-lg " placeholder="Search...">
-
-        <div class=" flex justify-center items-end">
-            <div class="">
-                <ul id="listNavbar" class="w-full h-full flex items-center justify-center gap-20 text-white font-medium max-lg:fixed max-lg:top-[75px] max-lg:right-0 max-lg:h-[88vh] max-lg:bg-titleColor  max-lg:flex-col max-lg:gap-12 max-lg:text-white max-lg:w-0 max-lg:overflow-hidden transition-all duration-400">
-                    <li><a class="hover:text-green-500" href="index.html">Home</a></li>
-                    <li><a class="hover:text-green-500" href="player.html">Player</a></li>
-                    <li><a class="hover:text-green-500" href="TeamBuilder.html">Team Builder</a></li>
-                    <li><a class="hover:text-green-500" href="#">About</a></li>
-                </ul>
-            </div>
-        </div>
-    </header>
-
-    <div class="relative h-full w-full">
-        <div class="absolute inset-0 bg-cover bg-center "
-             style="background-image: url('/images/staduim.jpg');">
-        </div>
-
-        <div class="relative flex items-center justify-around h-full">
-            <img src="/images/stadium_background.png" alt="" class="w-2/4 rounded-lg shadow-lg">
-                <div class="bg-black w-1/4 h-2/4">
-                    <h2 class="text-white text-2xl text-center p-2">Changement</h2>
-                    <hr class="border-t-2 border-white">
-                </div>
-        </div>
-
-    </div>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <title>Formation Football avec CSS Grid</title>
     
+</head>
+<body class="bg-black text-white font-sans">
 
-    <script src="js/script.js"></script>
+    <!-- Contenu principal -->
+    <main class="py-10 px-6">
+        <!-- Section de la formation avec l'arrière-plan du stade -->
+        <section class="field rounded-lg relative">
+            <!-- Gardien de but -->
+            <div class="player-card goalkeeper">Joueur 1</div>
+
+            <!-- Défenseurs -->
+            <div class="player-card defender1">Joueur 2</div>
+            <div class="player-card defender2">Joueur 3</div>
+            <div class="player-card defender3">Joueur 4</div>
+            <div class="player-card defender4">Joueur 5</div>
+
+            <!-- Milieux de terrain -->
+            <div class="player-card midfielder1">Joueur 6</div>
+            <div class="player-card midfielder2">Joueur 7</div>
+            <div class="player-card midfielder3">Joueur 8</div>
+
+            <!-- Attaquants -->
+            <div class="player-card forward1">Joueur 9</div>
+            <div class="player-card forward2">Joueur 10</div>
+            <div class="player-card forward3">Joueur 11</div>
+        </section>
+    </main>
+
 </body>
-
-
-<footer class="w-full min-h-[250px] pt-4 bg-black grid grid-cols-[30%_30%_40%] grid-rows-[80% 20%] justify-center max-lg:grid-cols-[50%_50%] max-lg:grid-rows-[auto_auto_60px] max-lg:gap-y-5">
-    <div class="flex flex-col pl-20 max-sm:pl-5">
-        <h3 class="text-white font-bold text-xl mb-5">Company</h3>
-        <ul class="flex flex-col gap-3 text-[#D4D4D4] font-medium">
-            <li>Home</li>
-            <li>Catalogue</li>
-            <li>A propos</li>
-        </ul>
-    </div>
-    <div class="flex flex-col">
-        <h3 class="text-white font-bold text-xl mb-5">Payer avec</h3>
-        <div class="grid grid-cols-3 w-1/2 payMethod gap-4 max-sm:justify-center max-sm:flex-wrap max-sm:w-[90%]">
-            <img src="../img/bank/paypal.svg" alt="Paypal">
-            <img src="../img/bank/apple-pay.svg" alt="apple">
-            <img src="../img/bank/mastercard.svg" alt="mastercard">
-            <img src="../img/bank/visa.svg" alt="visa">
-            <img src="../img/bank/bitcoin.svg" alt="bitcoin">
-            <img src="../img/bank/payu.svg" alt="payu">
-        </div>
-    </div>
-    <div class="flex flex-col gap-y-5 max-lg:col-span-full max-lg:pl-20 max-sm:pl-5">
-        <h3 class="text-white font-bold text-xl">Company</h3>
-        <p class="w-[70%] text-[#D4D4D4]">
-            Lorem ipsum sit amet, consectateur adispicing elit. Fusce euismod concallis velit, eu auctor lacus vehicula sit amet.
-        </p>
-        <div class="flex gap-3 max-sm:w-full max-sm:justify-center max-sm:pl-[-1.25rem]">
-            <a href="#"><div class="w-14 h-14 bg-[#A6A6A6] flex justify-center items-center hover:scale-105 transition-all duration-400"><i class="fa-brands fa-facebook-f text-white text-3xl"></i></div></a>
-            <a href="#"><div class="w-14 h-14 bg-[#A6A6A6] flex justify-center items-center hover:scale-105 transition-all duration-400"><i class="fa-brands fa-twitter text-white text-3xl"></i></div></a>
-            <a href="#"><div class="w-14 h-14 bg-[#A6A6A6] flex justify-center items-center hover:scale-105 transition-all duration-400"><i class="fa-brands fa-linkedin text-white text-3xl"></i></div></a>
-            <a href="#"><div class="w-14 h-14 bg-[#A6A6A6] flex justify-center items-center hover:scale-105 transition-all duration-400"><i class="fa-brands fa-github text-white text-3xl"></i></div></a>
-        </div>
-    </div>
-    <div class="col-span-full flex justify-center items-center pt-0">
-        <h6 class="text-white text-center">© 2024 Codebenders. All rights reserved</h6>
-    </div>
-</footer>
 </html>
