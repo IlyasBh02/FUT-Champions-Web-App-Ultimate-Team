@@ -53,7 +53,7 @@
                                 </div>
                             </div>
                 
-                            <!-- Défenseurs -->
+                            <!-- defens -->
                             <div id="LB" class="player-card ">
                                 <div>
                                 <h2>LB</h2>
@@ -103,7 +103,7 @@
                                 </div>
                             </div>
                 
-                            <!-- Milieux de terrain -->
+                            <!-- Milieux -->
                             <div id="LMDC" class="player-card">
                                 <div>
                                     <h2>LMDC</h2>
@@ -141,7 +141,7 @@
                                 </div>
                             </div>
                 
-                            <!-- Attaquants -->
+                            <!-- Attak -->
                             <div id="LW" class="player-card">
                                 <div>
                                     <h2>LW</h2>
@@ -186,89 +186,76 @@
             <!------------------------------------------------------ end grid ----------------------------------------------------->
             
             <!------------------------------------------------------ Card Ajout ----------------------------------------------------->
-                <div id="CardAjout" class="bg-black w-[30%] h-full rounded-md p-4 pt-0">
-                    <h2 class="text-white text-2xl text-center p-2">Ajouter un Joueur </h2>
-                    <hr class="border-t-2 border-white">
-                    <form id="player" class="w-[75%] mx-2 " >
-                        <div class="">
-                            <label for="name" class=" text-white">Name du joueur</label>  
-                            <input id="name" type="text" placeholder="Player Name" class="mt-1 p-2 w-[85%] rounded-md">
+            <div class="bg-black p-6 rounded-lg shadow-lg w-96">
+                <h2 class="text-2xl font-semibold text-center mb-4 text-green-600">Formulaire de Joueur</h2>
+        
+                <form id="playerForm">
+                    <div class="mb-4">
+                        <label for="playerName" class="block text-sm font-semibold text-white">Nom du Joueur</label>
+                        <input type="text" id="playerName" name="playerName" class="mt-2 p-2 w-full border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500" placeholder="Entrez le nom" required>
+                    </div>
+        
+                    <div class="mb-4">
+                        <label for="nationality" class="block text-sm font-semibold text-white">Nationality</label>
+                        <input type="text" id="nationality" name="nationality" class="mt-2 p-2 w-full border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500" placeholder="Entrez la nationalité" required>
+                    </div>
+        
+                    <div class="mb-4">
+                        <label for="teamUrl" class="block text-sm font-semibold text-white">Team</label>
+                        <input type="url" id="teamUrl" name="teamUrl" class="mt-2 p-2 w-full border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500" placeholder="Entrez l'URL de l'équipe" required>
+                    </div>
+        
+                    <div class="mb-4">
+                        <label for="position" class="block text-sm font-semibold text-white">Position</label>
+                        <select id="position" class="mt-1 p-2 w-[85%] rounded-md">
+                            <option value="GK">Goalkeeper</option>
+                            <option value="CB">Center Back</option>
+                            <option value="CB">Center Back</option>
+                            <option value="RB">Right Back</option>
+                            <option value="LB">Left Back</option>
+                            <option value="CDM">Central Defensive Midfielder</option>
+                            <option value="CM">Central Midfielder</option>
+                            <option value="CAM">Attacking Midfielder</option>
+                            <option value="RW">Right Wing</option>
+                            <option value="ST">Striker</option>
+                            <option value="LW"></option>
+                            <option value="Left Wing"></option>
+                        </select>
+                    </div>
+        
+                    <div class="grid grid-cols-2 gap-4 mb-4">
+                        <div class="col-span-1">
+                            <label for="pac" class="block text-sm font-semibold text-white">PAC</label>
+                            <input type="number" id="pac" name="pac" min="1" max="100" class="mt-2 p-2 w-full border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500" placeholder="1-100" required>
                         </div>
-                        <!-- <div>
-                            <label for="league" class="block text-white text-sm font-medium">leagues</label>
-                            <select id="league" class="mt-1 p-2 w-[85%] rounded-md" >
-                                <option value="Premier League">Premier Leauge</option>
-                                <option value="La Liga">La Liga</option>
-                                <option value="Bundesliga">Bundesliga</option>
-                                <option value="Serie A">Serie A</option>
-                                <option value="Ligue 1">Ligue 1</option>
-                                <option value="Saudi Arabic">Saudi Arabic</option>
-                            </select>
-                        </div> -->
-                        <div class="">
-                            <label for="nationality" class=" text-white">Nationality</label>  
-                            <input id="nationality" type="url" placeholder="Link for flag" class="mt-1 p-2 w-[85%] rounded-md">
+                        <div class="col-span-1">
+                            <label for="sho" class="block text-sm font-semibold text-white">SHO</label>
+                            <input type="number" id="sho" name="sho" min="1" max="100" class="mt-2 p-2 w-full border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500" placeholder="1-100" required>
                         </div>
-
-                        <div class="">
-                            <label for="team" class=" text-white">Team</label>  
-                            <input id="team" type="url" placeholder="Link for team logo" class="mt-1 p-2 w-[85%] rounded-md">
+                        <div class="col-span-1">
+                            <label for="pas" class="block text-sm font-semibold text-white">PAS</label>
+                            <input type="number" id="pas" name="pas" min="1" max="100" class="mt-2 p-2 w-full border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500" placeholder="1-100" required>
                         </div>
-
-                        <div>
-                            <label for="position" class="block text-white text-sm font-medium">Position</label>
-                                <select id="position" class="mt-1 p-2 w-[85%] rounded-md">
-                                    <option value="GK">Goalkeeper</option>
-                                    <option value="CB">Center Back</option>
-                                    <option value="CB">Center Back</option>
-                                    <option value="RB">Right Back</option>
-                                    <option value="LB">Left Back</option>
-                                    <option value="CDM">Central Defensive Midfielder</option>
-                                    <option value="CM">Central Midfielder</option>
-                                    <option value="CAM">Attacking Midfielder</option>
-                                    <option value="RW">Right Wing</option>
-                                    <option value="ST">Striker</option>
-                                    <option value="LW"></option>
-                                    <option value="Left Wing"></option>
-                                </select>
+                        <div class="col-span-1">
+                            <label for="dri" class="block text-sm font-semibold text-white">DRI</label>
+                            <input type="number" id="dri" name="dri" min="1" max="100" class="mt-2 p-2 w-full border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500" placeholder="1-100" required>
                         </div>
-
-                        <div class="grid grid-cols-3 w-full gap-2 mt-2">
-                            <div>
-                                <label for="PAC" class="block text-white text-sm font-medium">PAC</label>
-                                <input id="PAC" type="number" min="1" max="100" placeholder="Pass" class="mt-1 p-2 w-[85%] rounded-md">
-                            </div>
-                            <div>
-                                <label for="SHO" class="block text-white text-sm font-medium">SHO</label>
-                                <input id="SHO" type="number" min="1" max="100" placeholder="SHO" class="mt-1 p-2 w-[85%] rounded-md">
-                            </div>
-                            <div>
-                                <label for="PAS" class="block text-white text-sm font-medium">PAS</label>
-                                <input id="PAS" type="number" min="1" max="100" placeholder="PAS" class="mt-1 p-2 w-[85%] rounded-md">
-                            </div>
-                            <div>
-                                  <label for="DRI" class="block text-white text-sm font-medium">DRI</label>
-                                <input id="DRI" type="number" min="1" max="100" placeholder="DRI" class="mt-1 p-2 w-[85%] rounded-md">
-                            </div>
-                            <div>
-                                <label for="DEF" class="block text-white text-sm font-medium">DEF</label>
-                                <input id="DEF" type="number" min="1" max="100" placeholder="DEF" class="mt-1 p-2 w-[85%] rounded-md">
-                            </div>
-                            <div>
-                                <label for="PHY" class="block text-white text-sm font-medium">PHY</label>
-                                <input id="PHY" type="number" min="1" max="100" placeholder="PHY" class="mt-1 p-2 w-[85%] rounded-md">
-                            </div>
+                        <div class="col-span-1">
+                            <label for="dfe" class="block text-sm font-semibold text-white">DFE</label>
+                            <input type="number" id="dfe" name="dfe" min="1" max="100" class="mt-2 p-2 w-full border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500" placeholder="1-100" required>
                         </div>
-                        <div class="">
-                            <button type="button" id="AddPlayer" class="w-[40%] bg-zinc-400 hover:bg-green-500 text-white font-bold my-4 mr-2 py-2 px-4 rounded">
-                                Add
-                            </button>
-                            <button type="button" id="Cansel" class="w-[40%] bg-zinc-400 hover:bg-red-500 text-white font-bold my-4 ml-2 py-2 px-4 rounded">
-                                Cansel
-                            </button>
+                        <div class="col-span-1">
+                            <label for="phy" class="block text-sm font-semibold text-white">PHY</label>
+                            <input type="number" id="phy" name="phy" min="1" max="100" class="mt-2 p-2 w-full border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500" placeholder="1-100" required>
                         </div>
-                    </form>
-                </div>
+                    </div>
+        
+                    <div class="flex justify-evenly items-center ">
+                        <button type="submit" id="submitBtn" class="w-[90%] mx-1 py-2 bg-gray-500 text-white rounded-lg hover:bg-green-500">Ajouter</button>
+                        <button type="submit" id="submitBtn" class="w-[90%] mx-1 py-2 bg-gray-500 text-white rounded-lg hover:bg-red-500">Annuler</button>
+                    </div>
+                </form>
+            </div>
                 <!------------------------------------------------------ End Card Ajout ----------------------------------------------------->
 
             </div>
