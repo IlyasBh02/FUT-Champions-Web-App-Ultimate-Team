@@ -33,3 +33,28 @@
         #LW { grid-column: 3; grid-row: 3; }
         #ST { grid-column: 6; grid-row: 3; }
         #RW { grid-column: 9; grid-row: 3; }
+
+
+
+
+
+        /* .player-card {
+          border-radius: 8px;
+          padding: 20px;
+          color: white;
+        }
+        .player-card-top {
+          display: flex;
+          justify-content: space-between;
+          margin-bottom: 20px;
+        }
+        .player-card-bottom {
+          margin-top: 10px;
+        }
+        .player-picture img {
+          max-width: 100px;
+          border-radius: 50%;
+        }
+        .player-stats div {
+          font-size: 1rem;
+        } */
