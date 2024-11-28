@@ -10,86 +10,156 @@
     <title>Team</title>
 </head>
 
-<body class="h-screen">
-    <header class="h-20 w-full bg-black flex items-center  justify-around px-4">
-        <input type="text" class="p-2 rounded-lg " placeholder="Search...">
+<header class="h-20 w-full bg-black flex items-center  justify-around px-4">
+    <input type="text" class="p-2 rounded-lg " placeholder="Search...">
 
-        <div class=" flex justify-center items-end">
-            <div class="">
-                <ul id="listNavbar" class="w-full h-full flex items-center justify-center gap-20 text-white font-medium max-lg:fixed max-lg:top-[75px] max-lg:right-0 max-lg:h-[88vh] max-lg:bg-titleColor  max-lg:flex-col max-lg:gap-12 max-lg:text-white max-lg:w-0 max-lg:overflow-hidden transition-all duration-400">
-                    <li><a class="hover:text-green-500" href="index.html">Home</a></li>
-                    <li><a class="hover:text-green-500" href="player.html">Player</a></li>
-                    <li><a class="hover:text-green-500" href="TeamBuilder.html">Team Builder</a></li>
-                    <li><a class="hover:text-green-500" href="#">About</a></li>
-                </ul>
-            </div>
+    <div class=" flex justify-center items-end">
+        <div class="">
+            <ul id="listNavbar" class="w-full h-full flex items-center justify-center gap-20 text-white font-medium max-lg:fixed max-lg:top-[75px] max-lg:right-0 max-lg:h-[88vh] max-lg:bg-titleColor  max-lg:flex-col max-lg:gap-12 max-lg:text-white max-lg:w-0 max-lg:overflow-hidden transition-all duration-400">
+                <li><a class="hover:text-green-500" href="index.html">Home</a></li>
+                <li><a class="hover:text-green-500" href="player.html">Player</a></li>
+                <li><a class="hover:text-green-500" href="TeamBuilder.html">Team Builder</a></li>
+                <li><a class="hover:text-green-500" href="#">About</a></li>
+            </ul>
         </div>
-    </header>
+    </div>
+</header>
 
-    <div class="relative  h-full w-full">
+<body class="">
+    
+
+    <div class="relative  p-10 h-full w-full">
         <div class="absolute inset-0 bg-cover bg-center blur-sm "
-             style="background-image: url('/images/staduim.jpg');class">
+             style="background-image: url('/images/staduim.jpg');">
         </div>
 
         <div class="relative flex items-center justify-around h-full ">
             <!------------------------------------------------------ grid ----------------------------------------------------->
-            <div class="bg-[url('/images/stadium_background.png')] h-full bg-contain  bg-no-repeat w-full rounded-lg shadow-lg m-[4%]">
-                <!-- <img src="/images/stadium_background.png" alt="img.staduim" class="w-full rounded-lg shadow-lg"> -->
-                <!-- Grille du terrain -->
-                <div class="">
-                <!-- <div class="grid grid-cols-3 grid-rows-4 gap-0 h-[80%] w-[80%]"> -->
-
-                     <!-- 3j Attaquants -->
-                    <div id="Attak" class="grid grid-rows-1 grid-cols-5 gap-20 w-full h-full ">
-                        <div id="LW" class="grid-cols-1 bg-[url('/images/cart-1.png')] bg-contain bg-no-repeat flex justify-center w-[150px] h-[180px] ">
-                            <button class="text-white">
-                                <svg width="26" height="26" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.8" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                                <path d="M12 2a10 10 0 1 0 0 20 10 10 0 1 0 0-20z"></path>
-                                <path d="M12 8v8"></path>
-                                <path d="M8 12h8"></path>
-                              </svg>
-                            </button>
+            <div class="bg-[url('/images/stadium_background.png')] h-full bg-contain bg-no-repeat w-full rounded-lg shadow-lg m-[4%]">
+                <div class="relative">
+                    <div class="grid grid-cols-5 gap-6 w-full h-full rounded-lg">
+                        
+                        <!-- Row 1: 3 Attaquants -->
+                        <div id="Attak" class="grid grid-cols-3 gap-8 col-span-7">
+                            <div class="flex justify-center items-center bg-[url('/images/cart-1.png')] bg-contain bg-no-repeat w-[150px] h-[200px]">
+                                <button class="text-white">
+                                    <svg width="26" height="26" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.8" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M12 2a10 10 0 1 0 0 20 10 10 0 1 0 0-20z"></path>
+                                        <path d="M12 8v8"></path>
+                                        <path d="M8 12h8"></path>
+                                    </svg>
+                                </button>
+                            </div>
+                            <div class="flex justify-center items-center bg-[url('/images/cart-1.png')] bg-contain bg-no-repeat w-[150px] h-[200px]">
+                                <button class="text-white">
+                                    <svg width="26" height="26" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.8" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M12 2a10 10 0 1 0 0 20 10 10 0 1 0 0-20z"></path>
+                                        <path d="M12 8v8"></path>
+                                        <path d="M8 12h8"></path>
+                                    </svg>
+                                </button>
+                            </div>
+                            <div class="flex justify-center items-center bg-[url('/images/cart-1.png')] bg-contain bg-no-repeat w-[150px] h-[200px]">
+                                <button class="text-white">
+                                    <svg width="26" height="26" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.8" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M12 2a10 10 0 1 0 0 20 10 10 0 1 0 0-20z"></path>
+                                        <path d="M12 8v8"></path>
+                                        <path d="M8 12h8"></path>
+                                    </svg>
+                                </button>
+                            </div>
                         </div>
-                        <div id="ST" class="grid-cols-3x bg-[url('/images/cart-1.png')] bg-contain bg-no-repeat flex justify-center ">
-                            <button class="text-white">
-                                <svg width="26" height="26" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.8" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                                <path d="M12 2a10 10 0 1 0 0 20 10 10 0 1 0 0-20z"></path>
-                                <path d="M12 8v8"></path>
-                                <path d="M8 12h8"></path>
-                              </svg>
-                            </button>
-                        </div>
-                        <div id="RW" class="grid-cols-5 bg-[url('/images/cart-1.png')] bg-contain bg-no-repeat flex justify-center items-center ">
-                            <button class="text-white">
-                                <svg width="26" height="26" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.8" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                                <path d="M12 2a10 10 0 1 0 0 20 10 10 0 1 0 0-20z"></path>
-                                <path d="M12 8v8"></path>
-                                <path d="M8 12h8"></path>
-                              </svg>
-                            </button>
-                        </div>
-                    </div>
-            
-                    <!-- 3j MDC -->
-                    <div>
-
-                    </div>
         
-                    <!-- 4j DFC  -->
-                    <div>
-
-                    </div>
+                        <!-- Row 2: 3 Milieux de Terrain (MDC) -->
+                        <div id="MDC" class="grid grid-cols-3 gap-5 col-span-5">
+                            <div class="flex justify-center items-center bg-[url('/images/cart-1.png')] bg-contain bg-no-repeat w-[150px] h-[200px]">
+                                <button class="text-white">
+                                    <svg width="26" height="26" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.8" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M12 2a10 10 0 1 0 0 20 10 10 0 1 0 0-20z"></path>
+                                        <path d="M12 8v8"></path>
+                                        <path d="M8 12h8"></path>
+                                    </svg>
+                                </button>
+                            </div>
+                            <div class="flex justify-center items-center bg-[url('/images/cart-1.png')] bg-contain bg-no-repeat w-[150px] h-[200px]">
+                                <button class="text-white">
+                                    <svg width="26" height="26" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.8" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M12 2a10 10 0 1 0 0 20 10 10 0 1 0 0-20z"></path>
+                                        <path d="M12 8v8"></path>
+                                        <path d="M8 12h8"></path>
+                                    </svg>
+                                </button>
+                            </div>
+                            <div class="flex justify-center items-center bg-[url('/images/cart-1.png')] bg-contain bg-no-repeat w-[150px] h-[200px]">
+                                <button class="text-white">
+                                    <svg width="26" height="26" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.8" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M12 2a10 10 0 1 0 0 20 10 10 0 1 0 0-20z"></path>
+                                        <path d="M12 8v8"></path>
+                                        <path d="M8 12h8"></path>
+                                    </svg>
+                                </button>
+                            </div>
+                        </div>
         
-                    <!-- 1j GC-->
-                    <div>
-
+                        <!-- Row 3: 4 Défenseurs (DF) -->
+                        <div id="Def" class="grid grid-cols-4 gap-5 col-span-5">
+                            <div class="flex justify-center items-center bg-[url('/images/cart-1.png')] bg-contain bg-no-repeat w-[150px] h-[200px]">
+                                <button class="text-white">
+                                    <svg width="26" height="26" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.8" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M12 2a10 10 0 1 0 0 20 10 10 0 1 0 0-20z"></path>
+                                        <path d="M12 8v8"></path>
+                                        <path d="M8 12h8"></path>
+                                    </svg>
+                                </button>
+                            </div>
+                            <div class="flex justify-center items-center bg-[url('/images/cart-1.png')] bg-contain bg-no-repeat w-[150px] h-[200px]">
+                                <button class="text-white">
+                                    <svg width="26" height="26" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.8" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M12 2a10 10 0 1 0 0 20 10 10 0 1 0 0-20z"></path>
+                                        <path d="M12 8v8"></path>
+                                        <path d="M8 12h8"></path>
+                                    </svg>
+                                </button>
+                            </div>
+                            <div class="flex justify-center items-center bg-[url('/images/cart-1.png')] bg-contain bg-no-repeat w-[150px] h-[200px]">
+                                <button class="text-white">
+                                    <svg width="26" height="26" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.8" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M12 2a10 10 0 1 0 0 20 10 10 0 1 0 0-20z"></path>
+                                        <path d="M12 8v8"></path>
+                                        <path d="M8 12h8"></path>
+                                    </svg>
+                                </button>
+                            </div>
+                            <div class="flex justify-center items-center bg-[url('/images/cart-1.png')] bg-contain bg-no-repeat w-[150px] h-[200px]">
+                                <button class="text-white">
+                                    <svg width="26" height="26" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.8" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M12 2a10 10 0 1 0 0 20 10 10 0 1 0 0-20z"></path>
+                                        <path d="M12 8v8"></path>
+                                        <path d="M8 12h8"></path>
+                                    </svg>
+                                </button>
+                            </div>
+                        </div>
+        
+                        <!-- Row 4: 1 Gardien -->
+                        <div id="GK" class="grid grid-cols-3 gap-5 col-span-5">
+                            <div class="flex justify-center items-center bg-[url('/images/cart-1.png')] bg-contain bg-no-repeat w-[150px] h-[200px]">
+                                <button class="text-white">
+                                    <svg width="26" height="26" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.8" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M12 2a10 10 0 1 0 0 20 10 10 0 1 0 0-20z"></path>
+                                        <path d="M12 8v8"></path>
+                                        <path d="M8 12h8"></path>
+                                    </svg>
+                                </button>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
             
             <!------------------------------------------------------ end grid ----------------------------------------------------->
 
-                <div class="bg-black w-[20%] h-[80%] rounded-md p-4 pt-0">
+                <div id="CardAjout" class="bg-black w-[30%] h-full rounded-md p-4 pt-0">
                     <h2 class="text-white text-2xl text-center p-2">Ajouter un Joueur </h2>
                     <hr class="border-t-2 border-white">
                     <form id="player" class="w-[75%] mx-2 " >
@@ -97,6 +167,7 @@
                             <label for="name" class=" text-white">Name du joueur</label>  
                             <input id="name" type="text" placeholder="Player Name" class="mt-1 p-2 w-[85%] rounded-md">
                         </div>
+
                         <!-- <div>
                             <label for="league" class="block text-white text-sm font-medium">leagues</label>
                             <select id="league" class="mt-1 p-2 w-[85%] rounded-md" >
@@ -109,15 +180,16 @@
                             </select>
                         </div> -->
 
-                        
                         <div class="">
                             <label for="nationality" class=" text-white">Nationality</label>  
                             <input id="nationality" type="url" placeholder="Link for flag" class="mt-1 p-2 w-[85%] rounded-md">
                         </div>
+
                         <div class="">
                             <label for="team" class=" text-white">Team</label>  
                             <input id="team" type="url" placeholder="Link for team logo" class="mt-1 p-2 w-[85%] rounded-md">
                         </div>
+
                         <div>
                             <label for="position" class="block text-white text-sm font-medium">Position</label>
                                 <select id="position" class="mt-1 p-2 w-[85%] rounded-md">
@@ -172,55 +244,6 @@
                         </div>
                     </form>
                 </div>
-                
-                    <!---------------------------------------------------- card player ------------------------------------------------------------------->
-                <!-- <div id="ModelCardPalyer" class="">
-
-                    <div id="playerList" class="mt-6">
-                        <h2 class="text-xl font-semibold mb-4 text-white">Liste des joueurs</h2>
-                        <ul class="space-y-4"> -->
-                        <!-- Les joueurs ajoutés apparaîtront ici -->
-                        <!-- </ul>
-                    </div>
-                    <div class="wrapper">
-                        <div class="fut-player-card">
-                            <div class="player-card-top">
-                                <div class="player-master-info">
-                                    <div class="player-rating"><span>00</span></div>
-                                    <div class="player-position"><span>RW</span></div>
-                                    <div class="player-nation"><img src="https://selimdoyranli.com/cdn/fut-player-card/img/argentina.svg" alt="Argentina" draggable="false"/></div>
-                                    <div class="player-club"><img src="https://selimdoyranli.com/cdn/fut-player-card/img/barcelona.svg" alt="Barcelona" draggable="false"/></div>
-                                </div>
-                                <div class="player-picture"><img src="https://selimdoyranli.com/cdn/fut-player-card/img/messi.png" alt="Messi" draggable="false"/>
-                                </div>
-                            </div>
-                            <div class="player-card-bottom">
-                                <div class="player-info">
-                                    <div class="player-name"><span>MESSI</span></div>
-                                    <div class="player-features">
-                                        <div class="player-features-col"><span>
-                                            <div class="player-feature-value">00</div>
-                                            <div class="player-feature-title">PAC</div></span><span>
-                                            <div class="player-feature-value">00</div>
-                                            <div class="player-feature-title">SHO</div></span><span>
-                                            <div class="player-feature-value">00</div>
-                                            <div class="player-feature-title">PAS</div></span>
-                                        </div>
-                                        <div class="player-features-col"><span>
-                                            <div class="player-feature-value">00</div>
-                                            <div class="player-feature-title">DRI</div></span><span>
-                                            <div class="player-feature-value">00</div>
-                                            <div class="player-feature-title">DEF</div></span><span>
-                                            <div class="player-feature-value">00</div>
-                                            <div class="player-feature-title">PHY</div></span>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div> -->
-                <!---------------------------------------------------- end card player ----------------------------------------------------------------------------->
 
             </div>
             
