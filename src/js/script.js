@@ -1,49 +1,48 @@
-// Récupérer les éléments
-const form = document.getElementById('playerForm');
-const playerList = document.getElementById('playerList').querySelector('ul');
-const addPlayerButton = document.getElementById('addPlayer');
+document.getElementById("playerForm").addEventListener("submit", function(event) {
+  event.preventDefault(); // Empêche la soumission du formulaire
 
-// Ajouter un joueur
-addPlayerButton.addEventListener('click', () => {
-  const name = document.getElementById('name').value;
-  const league = document.getElementById('league').value;
-  const nationality = document.getElementById('nationality').value;
-  const position = document.getElementById('position').value;
-  const PAC = document.getElementById('PAC').value;
-  const SHO = document.getElementById('SHO').value;
-  const PAS = document.getElementById('PAS').value;
-  const DRI = document.getElementById('DRI').value;
-  const DEF = document.getElementById('DEF').value;
-  const PHY = document.getElementById('PHY').value;
+  let valid = true;
 
-
-  if (!name || !league|| !nationality || !position || !PAC || !SHO || !PAS || !DRI || !DEF || !PHY) {
-    alert('Veuillez remplir tous les champs obligatoires.');
-    return;
+  // Validation du Nom du Joueur : ne doit pas être vide et ne doit pas contenir de chiffres
+  const playerName = document.getElementById("playerName").value.trim();
+  if (playerName === "" || /\d/.test(playerName)) {
+      valid = false;
+      alert("Le nom du joueur est requis et ne doit pas contenir de chiffres.");
   }
 
-  // Créer l'élément joueur
-  const playerItem = document.createElement('li');
-  playerItem.className = 'p-4 bg-gray-700 rounded shadow flex justify-between items-center';
-  playerItem.innerHTML = `
-    <div>
-      <h3 class="font-bold text-lg">${name}</h3>
-      <p>Ligue: ${league} | Nationalité: ${nationality} | Position: ${position}</p>
-      <p>Stats: PAC ${PAC}, SHO ${SHO}, PAS ${PAS}, DRI ${DRI}, DEF ${DEF}, PHY ${PHY}</p>
-    </div>
-    <button class="bg-red-500 hover:bg-red-600 text-white font-bold py-1 px-3 rounded removePlayer">
-      Supprimer
-    </button>
-  `;
+  const nationality = document.getElementById("nationality").value;
+  const nationalityPattern = /^(https?|http):\/\/[^\s/$.?#].[^\s]*$/i;
+  if (!nationalityPattern.test(nationality)) {
+      valid = false;
+      alert("L'URL de la nationalité est invalide.");
+  }
 
-  // Bouton Supprimer
-  playerItem.querySelector('.removePlayer').addEventListener('click', () => {
-    playerItem.remove();
+  const teamUrl = document.getElementById("teamUrl").value;
+  const urlPattern = /^(https?|http):\/\/[^\s/$.?#].[^\s]*$/i;
+  if (!urlPattern.test(teamUrl)) {
+      valid = false;
+      alert("L'URL de l'équipe est invalide.");
+  }
+
+  // Validation de la position
+  const position = document.getElementById("position").value;
+  if (position === "") {
+      valid = false;
+      alert("entre la position !");
+  }
+
+  // Validation des statistiques entre 1 et 100
+  const stats = ["pac", "sho", "pas", "dri", "dfe", "phy"];
+  stats.forEach(stat => {
+      const value = parseInt(document.getElementById(stat).value);
+      if (isNaN(value) || value < 1 || value > 100) {
+          valid = false;
+          alert(`statique entre 1 et 100 !`);
+      }
   });
 
-  // Ajouter le joueur à la liste
-  playerList.appendChild(playerItem);
-
-  // Réinitialiser le formulaire
-  form.reset();
+  // Si tout est valide
+  if (valid) {
+      alert("player add Done !");
+  }
 });
