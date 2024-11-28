@@ -1,9 +1,8 @@
 document.getElementById("playerForm").addEventListener("submit", function(event) {
-  event.preventDefault(); // Empêche la soumission du formulaire
+  event.preventDefault(); 
 
   let valid = true;
 
-  // Validation du Nom du Joueur : ne doit pas être vide et ne doit pas contenir de chiffres
   const playerName = document.getElementById("playerName").value.trim();
   if (playerName === "" || /\d/.test(playerName)) {
       valid = false;
@@ -24,14 +23,12 @@ document.getElementById("playerForm").addEventListener("submit", function(event)
       alert("L'URL de l'équipe est invalide.");
   }
 
-  // Validation de la position
   const position = document.getElementById("position").value;
   if (position === "") {
       valid = false;
       alert("entre la position !");
   }
 
-  // Validation des statistiques entre 1 et 100
   const stats = ["pac", "sho", "pas", "dri", "dfe", "phy"];
   stats.forEach(stat => {
       const value = parseInt(document.getElementById(stat).value);
@@ -41,8 +38,15 @@ document.getElementById("playerForm").addEventListener("submit", function(event)
       }
   });
 
-  // Si tout est valide
   if (valid) {
       alert("player add Done !");
   }
 });
+
+
+
+
+
+
+
+// model card
