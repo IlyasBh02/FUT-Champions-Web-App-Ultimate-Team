@@ -209,50 +209,49 @@
                         <label for="position" class="block text-sm font-semibold text-white">Position</label>
                         <select id="position" class="mt-1 p-2 w-[85%] rounded-md">
                             <option value="GK">Goalkeeper</option>
-                            <option value="CB">Center Back</option>
-                            <option value="CB">Center Back</option>
+                            <option value="LCB">Left Center Back</option>
+                            <option value="RCB">Right Center Back</option>
                             <option value="RB">Right Back</option>
                             <option value="LB">Left Back</option>
-                            <option value="CDM">Central Defensive Midfielder</option>
-                            <option value="CM">Central Midfielder</option>
-                            <option value="CAM">Attacking Midfielder</option>
+                            <option value="MDC">Central Defensive Midfielder</option>
+                            <option value="LMDC">Left Midfielder</option>
+                            <option value="RMDC">Right Midfielder</option>
                             <option value="RW">Right Wing</option>
                             <option value="ST">Striker</option>
-                            <option value="LW"></option>
-                            <option value="Left Wing"></option>
+                            <option value="LW">Left Wing</option>
                         </select>
                     </div>
         
                     <div class="grid grid-cols-2 gap-4 mb-4">
                         <div class="col-span-1">
                             <label for="pac" class="block text-sm font-semibold text-white">PAC</label>
-                            <input type="number" id="pac" name="pac" min="1" max="100" class="mt-2 p-2 w-full border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500" placeholder="1-100" required>
+                            <input type="number" id="pac" name="pac" min="1" max="99" class="mt-2 p-2 w-full border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500" placeholder="1-100" required>
                         </div>
                         <div class="col-span-1">
                             <label for="sho" class="block text-sm font-semibold text-white">SHO</label>
-                            <input type="number" id="sho" name="sho" min="1" max="100" class="mt-2 p-2 w-full border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500" placeholder="1-100" required>
+                            <input type="number" id="sho" name="sho" min="1" max="99" class="mt-2 p-2 w-full border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500" placeholder="1-100" required>
                         </div>
                         <div class="col-span-1">
                             <label for="pas" class="block text-sm font-semibold text-white">PAS</label>
-                            <input type="number" id="pas" name="pas" min="1" max="100" class="mt-2 p-2 w-full border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500" placeholder="1-100" required>
+                            <input type="number" id="pas" name="pas" min="1" max="99" class="mt-2 p-2 w-full border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500" placeholder="1-100" required>
                         </div>
                         <div class="col-span-1">
                             <label for="dri" class="block text-sm font-semibold text-white">DRI</label>
-                            <input type="number" id="dri" name="dri" min="1" max="100" class="mt-2 p-2 w-full border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500" placeholder="1-100" required>
+                            <input type="number" id="dri" name="dri" min="1" max="99" class="mt-2 p-2 w-full border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500" placeholder="1-100" required>
                         </div>
                         <div class="col-span-1">
                             <label for="dfe" class="block text-sm font-semibold text-white">DFE</label>
-                            <input type="number" id="dfe" name="dfe" min="1" max="100" class="mt-2 p-2 w-full border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500" placeholder="1-100" required>
+                            <input type="number" id="dfe" name="dfe" min="1" max="99" class="mt-2 p-2 w-full border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500" placeholder="1-100" required>
                         </div>
                         <div class="col-span-1">
                             <label for="phy" class="block text-sm font-semibold text-white">PHY</label>
-                            <input type="number" id="phy" name="phy" min="1" max="100" class="mt-2 p-2 w-full border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500" placeholder="1-100" required>
+                            <input type="number" id="phy" name="phy" min="1" max="99" class="mt-2 p-2 w-full border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500" placeholder="1-100" required>
                         </div>
                     </div>
         
                     <div class="flex justify-evenly items-center ">
-                        <button type="submit" id="submitBtn" class="w-[90%] mx-1 py-2 bg-gray-500 text-white rounded-lg hover:bg-green-500">Ajouter</button>
-                        <button type="submit" id="submitBtn" class="w-[90%] mx-1 py-2 bg-gray-500 text-white rounded-lg hover:bg-red-500">Annuler</button>
+                        <button type="submit" id="add" class="w-[90%] mx-1 py-2 bg-gray-500 text-white rounded-lg hover:bg-green-500">Ajouter</button>
+                        <button type="submit" id="cancel" class="w-[90%] mx-1 py-2 bg-gray-500 text-white rounded-lg hover:bg-red-500">Annuler</button>
                     </div>
                 </form>
             </div>
@@ -263,7 +262,7 @@
 </body>
 
 
-<footer class="w-full min-h-[250px] pt-4 bg-black grid grid-cols-[30%_30%_40%] grid-rows-[80% 20%] justify-center max-lg:grid-cols-[50%_50%] max-lg:grid-rows-[auto_auto_60px] max-lg:gap-y-5">
+<!-- <footer class="w-full min-h-[250px] pt-4 bg-black grid grid-cols-[30%_30%_40%] grid-rows-[80% 20%] justify-center max-lg:grid-cols-[50%_50%] max-lg:grid-rows-[auto_auto_60px] max-lg:gap-y-5">
     <div class="flex flex-col pl-20 max-sm:pl-5">
         <h3 class="text-white font-bold text-xl mb-5">Company</h3>
         <ul class="flex flex-col gap-3 text-[#D4D4D4] font-medium">
@@ -298,5 +297,5 @@
     <div class="col-span-full flex justify-center items-center pt-0">
         <h6 class="text-white text-center">© 2024 Codebenders. All rights reserved</h6>
     </div>
-</footer>
+</footer> -->
 </html>
