@@ -1,158 +1,60 @@
 <!DOCTYPE html>
-<html lang="fr">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Squad Elite | All Players</title>
+
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,500;1,500&display=swap');
+    </style> 
+
     <script src="https://cdn.tailwindcss.com"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Saira+Semi+Condensed:wght@300;400;700&display=swap" rel="stylesheet">
-    <title>Team Builder</title>
+    <script>
+        tailwind.config = {
+          theme: {
+            extend: {
+              colors: {
+                clifford: '#da373d',
+              }
+              
+            },
+            fontFamily:{
+                Raleway: ["Raleway", 'sans-serif'],
+            },
+            backgroundImage: {
+            'staduim': "url('/images/stadium_background.webp')",
+            'goldenballcard':"url('/images/card-1.png')",
+            'blackcard':"url('/images/card-1.png')",
+            // 'total_rush':"url('/images/badge_total_rush.webp')",
+            // 'goldcard':"url('/images/card-1.png')",
+            // 'messiPhoto':"url('/images/messi.webp')",
+            // 'intermiami':"url('/images/intermiami.webp')",
+            // 'argentina':"url('/images/argentina.webp')"
+             },
+          }
+        }
+</script>
 </head>
-<body class="bg-black text-white font-sans">
-
-    <!-- Header -->
-    <header class="bg-black text-white py-5 px-6 flex justify-between items-center">
-        <input type="text" class="p-2 rounded-lg bg-gray-700 text-white placeholder-gray-400 focus:outline-none" placeholder="Rechercher...">
-        <nav>
-            <ul class="flex space-x-6 text-lg">
-                <li><a href="index.html" class="hover:text-green-500">Accueil</a></li>
-                <li><a href="player.html" class="hover:text-green-500">Joueurs</a></li>
-                <li><a href="TeamBuilder.html" class="hover:text-green-500">Créer une équipe</a></li>
-                <li><a href="#" class="hover:text-green-500">À propos</a></li>
-            </ul>
-        </nav>
-    </header>
-
-    <!-- Main Content -->
-    <main class="py-10 px-6">
-
-        <!-- Hero Section with Background -->
-        <div class="relative w-full h-96 bg-cover bg-center rounded-lg" style="background-image: url('/images/your-background-image.jpg');">
-            <div class="absolute inset-0 bg-black opacity-50 rounded-lg"></div>
-            <div class="relative flex justify-center items-center h-full">
-                <h1 class="text-4xl font-bold text-white">Construisez votre équipe</h1>
-            </div>
-        </div>
-
-        <!-- Player Cards Section -->
-        <section class="mt-12">
-            <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8">
-
-                <!-- Player Card Example 1 -->
-                <div class="bg-gray-800 p-4 rounded-lg shadow-lg">
-                    <div class="bg-cover bg-center h-40 rounded-lg" style="background-image: url('/images/player-image1.jpg');"></div>
-                    <div class="mt-4">
-                        <h3 class="text-xl font-semibold">Nom du Joueur</h3>
-                        <p class="mt-2">Position: Attaquant</p>
-                        <button class="mt-4 w-full bg-green-500 py-2 rounded-lg text-white hover:bg-green-700">Ajouter</button>
-                    </div>
-                </div>
-
-                <!-- Player Card Example 2 -->
-                <div class="bg-gray-800 p-4 rounded-lg shadow-lg">
-                    <div class="bg-cover bg-center h-40 rounded-lg" style="background-image: url('/images/player-image2.jpg');"></div>
-                    <div class="mt-4">
-                        <h3 class="text-xl font-semibold">Nom du Joueur</h3>
-                        <p class="mt-2">Position: Défenseur</p>
-                        <button class="mt-4 w-full bg-green-500 py-2 rounded-lg text-white hover:bg-green-700">Ajouter</button>
-                    </div>
-                </div>
-
-                <!-- Player Card Example 3 -->
-                <div class="bg-gray-800 p-4 rounded-lg shadow-lg">
-                    <div class="bg-cover bg-center h-40 rounded-lg" style="background-image: url('/images/player-image3.jpg');"></div>
-                    <div class="mt-4">
-                        <h3 class="text-xl font-semibold">Nom du Joueur</h3>
-                        <p class="mt-2">Position: Milieu</p>
-                        <button class="mt-4 w-full bg-green-500 py-2 rounded-lg text-white hover:bg-green-700">Ajouter</button>
-                    </div>
-                </div>
-
-                <!-- Player Card Example 4 -->
-                <div class="bg-gray-800 p-4 rounded-lg shadow-lg">
-                    <div class="bg-cover bg-center h-40 rounded-lg" style="background-image: url('/images/player-image4.jpg');"></div>
-                    <div class="mt-4">
-                        <h3 class="text-xl font-semibold">Nom du Joueur</h3>
-                        <p class="mt-2">Position: Gardien</p>
-                        <button class="mt-4 w-full bg-green-500 py-2 rounded-lg text-white hover:bg-green-700">Ajouter</button>
-                    </div>
-                </div>
-
-            </div>
-        </section>
-
-        <!-- Add New Player Form -->
-        <section class="mt-12 bg-gray-800 p-8 rounded-lg shadow-lg">
-            <h2 class="text-2xl font-semibold mb-4">Ajouter un nouveau joueur</h2>
-            <form class="space-y-6">
-                <div>
-                    <label for="name" class="text-white">Nom du Joueur</label>
-                    <input type="text" id="name" name="name" class="mt-2 p-3 w-full rounded-lg bg-gray-700 text-white placeholder-gray-400 focus:outline-none" placeholder="Nom du joueur">
-                </div>
-
-                <div>
-                    <label for="nationality" class="text-white">Nationalité</label>
-                    <input type="text" id="nationality" name="nationality" class="mt-2 p-3 w-full rounded-lg bg-gray-700 text-white placeholder-gray-400 focus:outline-none" placeholder="Nationalité">
-                </div>
-
-                <div>
-                    <label for="position" class="text-white">Position</label>
-                    <select id="position" name="position" class="mt-2 p-3 w-full rounded-lg bg-gray-700 text-white placeholder-gray-400 focus:outline-none">
-                        <option value="GK">Gardien</option>
-                        <option value="CB">Défenseur central</option>
-                        <option value="FB">Arrière latéral</option>
-                        <option value="CM">Milieu central</option>
-                        <option value="ST">Attaquant</option>
-                    </select>
-                </div>
-
-                <div class="grid grid-cols-2 gap-6">
-                    <div>
-                        <label for="pace" class="text-white">PAC</label>
-                        <input type="number" id="pace" name="pace" min="1" max="99" class="mt-2 p-3 w-full rounded-lg bg-gray-700 text-white placeholder-gray-400 focus:outline-none" placeholder="PAC">
-                    </div>
-                    <div>
-                        <label for="shooting" class="text-white">SHO</label>
-                        <input type="number" id="shooting" name="shooting" min="1" max="99" class="mt-2 p-3 w-full rounded-lg bg-gray-700 text-white placeholder-gray-400 focus:outline-none" placeholder="SHO">
-                    </div>
-                </div>
-
-                <div class="flex justify-between gap-6">
-                    <button type="submit" class="w-full bg-green-500 py-3 rounded-lg text-white hover:bg-green-700">Ajouter Joueur</button>
-                    <button type="button" class="w-full bg-red-500 py-3 rounded-lg text-white hover:bg-red-700">Annuler</button>
-                </div>
-            </form>
-        </section>
-
-    </main>
-
-    <!-- Footer -->
-    <footer class="bg-black text-white py-8 mt-12">
-        <div class="max-w-6xl mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
-            <div>
-                <h3 class="text-xl font-bold">À propos de nous</h3>
-                <p class="mt-4">Nous offrons une plateforme pour créer des équipes de foot sur mesure. Rejoignez-nous pour une expérience de jeu unique!</p>
-            </div>
-            <div>
-                <h3 class="text-xl font-bold">Liens utiles</h3>
-                <ul class="mt-4 space-y-2">
-                    <li><a href="#" class="hover:text-green-500">Accueil</a></li>
-                    <li><a href="#" class="hover:text-green-500">Catalogue</a></li>
-                    <li><a href="#" class="hover:text-green-500">À propos</a></li>
+<body class="bg-[#2b2a2a] text-white">
+    <header class="h-20 w-full bg-black flex items-center  justify-around px-4">
+        <input type="text" class="p-2 rounded-lg " placeholder="Search...">
+    
+        <div class=" flex justify-center items-end">
+            <div class="">
+                <ul id="listNavbar" class="w-full h-full flex items-center justify-center gap-20 text-white font-medium max-lg:fixed max-lg:top-[75px] max-lg:right-0 max-lg:h-[88vh] max-lg:bg-titleColor  max-lg:flex-col max-lg:gap-12 max-lg:text-white max-lg:w-0 max-lg:overflow-hidden transition-all duration-400">
+                    <li><a class="hover:text-green-500" href="/index.html">Home</a></li>
+                    <li><a class="hover:text-green-500" href="player.html">Player</a></li>
                 </ul>
             </div>
-            <div>
-                <h3 class="text-xl font-bold">Payer avec</h3>
-                <div class="flex gap-4 mt-4">
-                    <img src="../img/paypal.svg" alt="PayPal" class="w-12 h-12">
-                    <img src="../img/apple-pay.svg" alt="Apple Pay" class="w-12 h-12">
-                </div>
-            </div>
         </div>
+    </header>
 
-        <div class="text-center text-sm mt-8">
-            <p>© 2024 TeamBuilder. Tous droits réservés.</p>
-        </div>
-    </footer>
 
+     <section id="playersList" class="grid grid-cols-6 px-16 bg-[('/images/staduim.jpg');]">
+
+     </section>
+
+    <script src="./js/Player.js"></script>
 </body>
 </html>

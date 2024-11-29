@@ -1,9 +1,8 @@
 document.getElementById("playerForm").addEventListener("submit", function(event) {
   event.preventDefault(); 
-
   let valid = true;
-
   const playerName = document.getElementById("playerName").value.trim();
+  console.log(playerName)
   if (playerName === "" || /\d/.test(playerName)) {
       valid = false;
       alert("Le nom du joueur est requis et ne doit pas contenir de chiffres.");
@@ -43,9 +42,13 @@ document.getElementById("playerForm").addEventListener("submit", function(event)
   }
 });
 
-
-
-
+let btns = document.querySelectorAll('.add');
+btns.forEach(btn => {
+  btn.addEventListener('click', function(e) {
+    e.preventDefault();
+    console.log('hello');
+  });
+});
 
 
 
@@ -77,7 +80,7 @@ document.getElementById("playerForm").addEventListener("submit", function(e) {
       <p>Team: <a href="${teamUrl}" class="text-blue-300" target="_blank">${teamUrl}</a></p>
       <p>PAC: ${pac}, SHO: ${sho}, PAS: ${pas}, DRI: ${dri}, DFE: ${dfe}, PHY: ${phy}</p>
   `;
-
+  console.log(playerName)
   // Ajouter la card à la position sélectionnée
   const positionCard = document.getElementById(position);
   if (positionCard) {
@@ -87,3 +90,4 @@ document.getElementById("playerForm").addEventListener("submit", function(e) {
   // Réinitialiser le formulaire après ajout
   document.getElementById("playerForm").reset();
 });
+

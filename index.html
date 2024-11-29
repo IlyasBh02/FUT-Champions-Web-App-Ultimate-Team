@@ -16,10 +16,8 @@
     <div class=" flex justify-center items-end">
         <div class="">
             <ul id="listNavbar" class="w-full h-full flex items-center justify-center gap-20 text-white font-medium max-lg:fixed max-lg:top-[75px] max-lg:right-0 max-lg:h-[88vh] max-lg:bg-titleColor  max-lg:flex-col max-lg:gap-12 max-lg:text-white max-lg:w-0 max-lg:overflow-hidden transition-all duration-400">
-                <li><a class="hover:text-green-500" href="index.html">Home</a></li>
-                <li><a class="hover:text-green-500" href="player.html">Player</a></li>
-                <li><a class="hover:text-green-500" href="TeamBuilder.html">Team Builder</a></li>
-                <li><a class="hover:text-green-500" href="#">About</a></li>
+                <li><a class="hover:text-green-500" href="/index.html">Home</a></li>
+                <li><a class="hover:text-green-500" href="/src/player.html">Player</a></li>
             </ul>
         </div>
     </div>
@@ -40,142 +38,88 @@
                         <!-- Section de la formation avec l'arrière-plan du stade -->
                         <section class="field rounded-lg relative">
                             <!-- Gardien de but -->
-                            <div id="GK" class="player-card">
-                                <div>
-                                    <h2>GK</h2>
-                                    <button class="text-white">
-                                        <svg width="26" height="26" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.8" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                                        <path d="M12 2a10 10 0 1 0 0 20 10 10 0 1 0 0-20z"></path>
-                                        <path d="M12 8v8"></path>
-                                        <path d="M8 12h8"></path>
-                                      </svg>
-                                    </button>
+                            <div id="GK" class="player-card flex flex-col justify-start">
+                                <div class="oop">
+                                    <div class="text-xs mt-3 w-1/5">
+                                        <p>90</p>
+                                        <p>GK</p>
+                                    </div>
+                                    <div class="w-1/5">
+                                        <p>messi</p>
+                                    </div>
+                                    <h2 class="hidden">GK</h2>
+                                    <img src="../images/add.svg" class="add bg-red-500 cursor-pointer hidden" alt="">
                                 </div>
                             </div>
                 
                             <!-- defens -->
                             <div id="LB" class="player-card ">
-                                <div>
-                                <h2>LB</h2>
-                                <button class="text-white">
-                                    <svg width="26" height="26" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.8" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                                    <path d="M12 2a10 10 0 1 0 0 20 10 10 0 1 0 0-20z"></path>
-                                    <path d="M12 8v8"></path>
-                                    <path d="M8 12h8"></path>
-                                  </svg>
-                                </button>
+                                <div class="add-icon">
+                                <h2 class="hidden">LB</h2>
+                                <img src="../images/add.svg" class="add bg-red-500 cursor-pointer hidden" alt="">
                                 </div>
                             </div>
                             <div id="LDC" class="player-card">
-                                <div>
-                                    <h2>LDC</h2>
-                                    <button class="text-white">
-                                        <svg width="26" height="26" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.8" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                                        <path d="M12 2a10 10 0 1 0 0 20 10 10 0 1 0 0-20z"></path>
-                                        <path d="M12 8v8"></path>
-                                        <path d="M8 12h8"></path>
-                                      </svg>
-                                    </button>
+                                <div class="add-icon">
+                                    <h2 class="hidden">LDC</h2>
+                                    <img src="../images/add.svg" class="add bg-red-500 cursor-pointer hidden" alt="">
                                 </div>
                             </div>
                             <div id="RDC" class="player-card">
-                                <div>
-                                    <h2>RDC</h2>
-                                    <button class="text-white">
-                                        <svg width="26" height="26" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.8" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                                        <path d="M12 2a10 10 0 1 0 0 20 10 10 0 1 0 0-20z"></path>
-                                        <path d="M12 8v8"></path>
-                                        <path d="M8 12h8"></path>
-                                      </svg>
-                                    </button>
+                                <div class="add-icon">
+                                    <h2 class="hidden">RDC</h2>
+                                    <img src="../images/add.svg" class="add bg-red-500 cursor-pointer hidden" alt="">
                                 </div>
                             </div>
                             <div id="RB" class="player-card">
-                                <div>
-                                    <h2>RB</h2>
-                                    <button class="text-white">
-                                        <svg width="26" height="26" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.8" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                                        <path d="M12 2a10 10 0 1 0 0 20 10 10 0 1 0 0-20z"></path>
-                                        <path d="M12 8v8"></path>
-                                        <path d="M8 12h8"></path>
-                                      </svg>
-                                    </button>
+                                <div class="add-icon">
+                                    <h2 class="hidden">RB</h2>
+                                    <img src="../images/add.svg" class="add bg-red-500 cursor-pointer hidden" alt="">
                                 </div>
                             </div>
                 
                             <!-- Milieux -->
                             <div id="LMDC" class="player-card">
-                                <div>
-                                    <h2>LMDC</h2>
-                                    <button class="text-white">
-                                        <svg width="26" height="26" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.8" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                                        <path d="M12 2a10 10 0 1 0 0 20 10 10 0 1 0 0-20z"></path>
-                                        <path d="M12 8v8"></path>
-                                        <path d="M8 12h8"></path>
-                                      </svg>
-                                    </button>
+                                <div  class="add-icon">
+                                    <h2 class="hidden">LMDC</h2>
+                                    <img src="../images/add.svg" class="add bg-red-500 cursor-pointer hidden" alt="">
+
                                 </div>
                             </div>
                             <div id="MDC" class="player-card">
-                                <div>
-                                    <h2>MDC</h2>
-                                    <button class="text-white">
-                                        <svg width="26" height="26" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.8" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                                        <path d="M12 2a10 10 0 1 0 0 20 10 10 0 1 0 0-20z"></path>
-                                        <path d="M12 8v8"></path>
-                                        <path d="M8 12h8"></path>
-                                      </svg>
-                                    </button>
+                                <div class="add-icon">
+                                    <h2 class="hidden">MDC</h2>
+                                    <img src="../images/add.svg" class="add bg-red-500 cursor-pointer hidden" alt="">
+
                                 </div>
                             </div>
-                            <div id="RMDC" class="player-card">
-                                <div>
-                                    <h2>RMDC</h2>
-                                    <button class="text-white">
-                                        <svg width="26" height="26" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.8" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                                        <path d="M12 2a10 10 0 1 0 0 20 10 10 0 1 0 0-20z"></path>
-                                        <path d="M12 8v8"></path>
-                                        <path d="M8 12h8"></path>
-                                      </svg>
-                                    </button>
+                            <div id="RMDC" class="player-card flex flex-col">
+                                <div class="add-icon">
+                                    <h2 class="hidden">RMDC</h2>
+                                    <img src="../images/add.svg" class="add bg-red-500 cursor-pointer hidden" alt="">
+
                                 </div>
                             </div>
                 
                             <!-- Attak -->
                             <div id="LW" class="player-card">
-                                <div>
-                                    <h2>LW</h2>
-                                    <button class="text-white">
-                                        <svg width="26" height="26" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.8" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                                        <path d="M12 2a10 10 0 1 0 0 20 10 10 0 1 0 0-20z"></path>
-                                        <path d="M12 8v8"></path>
-                                        <path d="M8 12h8"></path>
-                                      </svg>
-                                    </button>
+                                <div class="add-icon">
+                                    <h2 class="hidden">LW</h2>
+                                    <img src="../images/add.svg" class="add bg-red-500 cursor-pointer hidden" alt="">
+
                                 </div>
                             </div>
                             <div id="ST" class="player-card">
                                 <div>
-                                    <h2>ST</h2>
-                                    <button class="text-white">
-                                        <svg width="26" height="26" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.8" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                                        <path d="M12 2a10 10 0 1 0 0 20 10 10 0 1 0 0-20z"></path>
-                                        <path d="M12 8v8"></path>
-                                        <path d="M8 12h8"></path>
-                                      </svg>
-                                    </button>
+                                    <h2 class="hidden">ST</h2>
+                                    <img src="../images/add.svg" class="add bg-red-500 cursor-pointer hidden" alt="">
                                 </div>
                             </div>
                             <div id="RW" class="player-card">
-                                <div>
-                                    <h2>RW</h2>
-                                    <button class="text-white">
-                                        <svg width="26" height="26" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.8" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                                        <path d="M12 2a10 10 0 1 0 0 20 10 10 0 1 0 0-20z"></path>
-                                        <path d="M12 8v8"></path>
-                                        <path d="M8 12h8"></path>
-                                      </svg>
-                                    </button>
+                                <div class="add-icon">
+                                    <h2 class="hidden">RW</h2>
+                                    <img src="../images/add.svg" class="add bg-red-500 cursor-pointer hidden" alt="">
+
                                 </div>
                             </div>
                         </section>
@@ -191,7 +135,7 @@
         
                 <form id="playerForm">
                     <div class="mb-4">
-                        <label for="playerName" class="block text-sm font-semibold text-white">Nom du Joueur</label>
+                        <label  for="playerName" class="block text-sm font-semibold text-white">Nom du Joueur</label>
                         <input type="text" id="playerName" name="playerName" class="mt-2 p-2 w-full border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500" placeholder="Entrez le nom" required>
                     </div>
         
