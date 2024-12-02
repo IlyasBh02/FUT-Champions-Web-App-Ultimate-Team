@@ -3,210 +3,211 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./output.css">
     <script src="https://cdn.tailwindcss.com"></script>
-    <link rel="stylesheet", href="https://fonts.googleapis.com/css?family=Saira+Semi+Condensed:300,400,700">
-    <link rel="stylesheet" href="/style.css">
-    <title>Team</title>
+    <link rel="stylesheet" href="style.css">
+  
+    <title>Document</title>
 </head>
-
-<header class="h-20 w-full bg-black flex items-center  justify-around px-4">
-    <input type="text" class="p-2 rounded-lg " placeholder="Search...">
-
-    <div class=" flex justify-center items-end">
-        <div class="">
-            <ul id="listNavbar" class="w-full h-full flex items-center justify-center gap-20 text-white font-medium max-lg:fixed max-lg:top-[75px] max-lg:right-0 max-lg:h-[88vh] max-lg:bg-titleColor  max-lg:flex-col max-lg:gap-12 max-lg:text-white max-lg:w-0 max-lg:overflow-hidden transition-all duration-400">
-                <li><a class="hover:text-green-500" href="/index.html">Home</a></li>
-                <li><a class="hover:text-green-500" href="/src/player.html">Player</a></li>
-            </ul>
-        </div>
-    </div>
-</header>
-
-<body class="">
-
-    <div class="relative  p-10 h-full w-full">
-        <div class="absolute inset-0 bg-cover bg-center blur-sm "
-             style="background-image: url('/images/staduim.jpg');">
-        </div>
-
-        <div class="relative flex items-center justify-around h-full ">
-            <!------------------------------------------------------ grid ----------------------------------------------------->
+<body >
+    <header class="h-20 w-full bg-black flex items-center  justify-around px-4">
+        <input type="text" class="p-2 rounded-lg " placeholder="Search...">
+    
+        <div class=" flex justify-center items-end">
             <div class="">
-                <div class="relative">
-                    <main class="py-10 px-6">
-                        <!-- Section de la formation avec l'arrière-plan du stade -->
-                        <section class="field rounded-lg relative">
-                            <!-- Gardien de but -->
-                            <div id="GK" class="player-card flex flex-col justify-start">
-                                <div class="oop">
-                                    <div class="text-xs mt-3 w-1/5">
-                                        <p>90</p>
-                                        <p>GK</p>
-                                    </div>
-                                    <div class="w-1/5">
-                                        <p>messi</p>
-                                    </div>
-                                    <h2 class="hidden">GK</h2>
-                                    <img src="../images/add.svg" class="add bg-red-500 cursor-pointer hidden" alt="">
-                                </div>
-                            </div>
-                
-                            <!-- defens -->
-                            <div id="LB" class="player-card ">
-                                <div class="add-icon">
-                                <h2 class="hidden">LB</h2>
-                                <img src="../images/add.svg" class="add bg-red-500 cursor-pointer hidden" alt="">
-                                </div>
-                            </div>
-                            <div id="LDC" class="player-card">
-                                <div class="add-icon">
-                                    <h2 class="hidden">LDC</h2>
-                                    <img src="../images/add.svg" class="add bg-red-500 cursor-pointer hidden" alt="">
-                                </div>
-                            </div>
-                            <div id="RDC" class="player-card">
-                                <div class="add-icon">
-                                    <h2 class="hidden">RDC</h2>
-                                    <img src="../images/add.svg" class="add bg-red-500 cursor-pointer hidden" alt="">
-                                </div>
-                            </div>
-                            <div id="RB" class="player-card">
-                                <div class="add-icon">
-                                    <h2 class="hidden">RB</h2>
-                                    <img src="../images/add.svg" class="add bg-red-500 cursor-pointer hidden" alt="">
-                                </div>
-                            </div>
-                
-                            <!-- Milieux -->
-                            <div id="LMDC" class="player-card">
-                                <div  class="add-icon">
-                                    <h2 class="hidden">LMDC</h2>
-                                    <img src="../images/add.svg" class="add bg-red-500 cursor-pointer hidden" alt="">
-
-                                </div>
-                            </div>
-                            <div id="MDC" class="player-card">
-                                <div class="add-icon">
-                                    <h2 class="hidden">MDC</h2>
-                                    <img src="../images/add.svg" class="add bg-red-500 cursor-pointer hidden" alt="">
-
-                                </div>
-                            </div>
-                            <div id="RMDC" class="player-card flex flex-col">
-                                <div class="add-icon">
-                                    <h2 class="hidden">RMDC</h2>
-                                    <img src="../images/add.svg" class="add bg-red-500 cursor-pointer hidden" alt="">
-
-                                </div>
-                            </div>
-                
-                            <!-- Attak -->
-                            <div id="LW" class="player-card">
-                                <div class="add-icon">
-                                    <h2 class="hidden">LW</h2>
-                                    <img src="../images/add.svg" class="add bg-red-500 cursor-pointer hidden" alt="">
-
-                                </div>
-                            </div>
-                            <div id="ST" class="player-card">
-                                <div>
-                                    <h2 class="hidden">ST</h2>
-                                    <img src="../images/add.svg" class="add bg-red-500 cursor-pointer hidden" alt="">
-                                </div>
-                            </div>
-                            <div id="RW" class="player-card">
-                                <div class="add-icon">
-                                    <h2 class="hidden">RW</h2>
-                                    <img src="../images/add.svg" class="add bg-red-500 cursor-pointer hidden" alt="">
-
-                                </div>
-                            </div>
-                        </section>
-                    </main>
-                </div>
+                <ul id="listNavbar" class="w-full h-full flex items-center justify-center gap-20 text-white font-medium max-lg:fixed max-lg:top-[75px] max-lg:right-0 max-lg:h-[88vh] max-lg:bg-titleColor  max-lg:flex-col max-lg:gap-12 max-lg:text-white max-lg:w-0 max-lg:overflow-hidden transition-all duration-400">
+                    <li><a class="hover:text-green-500" href="/index.html">Home</a></li>
+                    <li><a class="hover:text-green-500" href="/src/player.html">Player</a></li>
+                </ul>
             </div>
+        </div>
+    </header>
+
+
+    <div class=""> <img src="/images/stadium_background.png" class="bg-cover h-screen w-screen absolute" alt=""></div>
+   
+        
+        
+      
+    <div class=" flex flex-col lg:flex-row lg:justify-around bg-slate-100 ">
+       
+        <div id="match" class="grid  grid-rows-4   bg-[url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iODkyIiBoZWlnaHQ9IjcyNSIgdmlld0JveD0iMCAwIDkwNCA2NTAiIGZpbGw9Im5vbmUiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+CjxwYXRoIGQ9Ik05MDMgNjQ5LjQzOUgxTDEyMC4zMTEgMUg3ODMuNzg4TDkwMyA2NDkuNDM5WiIgZmlsbD0iIzQwNDA0MCIgc3Ryb2tlPSIjNjk2OTY5IiBzdHJva2UtbWl0ZXJsaW1pdD0iMTAiLz4KPHBhdGggZD0iTTY5Ljg4NDMgMjc1LjAzOEg4MzQuMTY5IiBzdHJva2U9IiM2OTY5NjkiIHN0cm9rZS1taXRlcmxpbWl0PSIxMCIvPgo8cGF0aCBkPSJNNTUwLjk5MiAyNzUuNDI1QzU1My4xOTQgMzIxLjcwMyA1MDguOTIxIDM2MC43NjMgNDUyLjAxOSAzNjAuNzYzQzM5NS4xMTcgMzYwLjc2MyAzNTAuODUzIDMyMS43MDMgMzUzLjA2MiAyNzUuNDI1QzM1NS4xNzIgMjMxLjEyMyAzOTkuNDUyIDE5Ni41NjQgNDUyLjAzNSAxOTYuNTY0QzUwNC42MTggMTk2LjU2NCA1NDguODkgMjMxLjExNSA1NTAuOTkyIDI3NS40MjVaIiBzdHJva2U9IiM2OTY5NjkiIHN0cm9rZS1taXRlcmxpbWl0PSIxMCIvPgo8cGF0aCBkPSJNNTQxLjI4OCA3MS40MDA4QzU0My4wNzggMTA5LjAwOSA1MDMuMDg2IDE0MC42MzIgNDUxLjg5NyAxNDAuNjMyQzQwMC43MDggMTQwLjYzMiAzNjAuNzMyIDEwOS4wMTcgMzYyLjUzIDcxLjQwMDhDMzY0LjI1OSAzNS4yNDQ2IDQwNC4yNTEgNi45MzU5MSA0NTEuOTIgNi45MzU5MUM0OTkuNTgyIDYuOTM1OTEgNTM5LjU3NCAzNS4yNDQ2IDU0MS4yODggNzEuNDAwOFoiIHN0cm9rZT0iIzY5Njk2OSIgc3Ryb2tlLW1pdGVybGltaXQ9IjEwIi8+CjxwYXRoIGQ9Ik0yNjkuMTI1IDk2LjQ5OTZINjQwLjA5M0w2MzAuNjYzIDEuMTUzMkgyNzguMzEyTDI2OS4xMjUgOTYuNDk5NloiIGZpbGw9IiM0MDQwNDAiIHN0cm9rZT0iIzY5Njk2OSIgc3Ryb2tlLW1pdGVybGltaXQ9IjEwIi8+CjxwYXRoIGQ9Ik0zNzEuOTIyIDU0Ljc2MjVINTMyLjU0Mkw1MzAuMjE5IDEuMTM3MTVIMzc0LjI0NUwzNzEuOTIyIDU0Ljc2MjVaIiBzdHJva2U9IiM2OTY5NjkiIHN0cm9rZS1taXRlcmxpbWl0PSIxMCIvPgo8cGF0aCBkPSJNMzQzLjQ2NCA1MzAuMzMzQzM0Ni4wNjEgNDc0LjU1NCAzOTUuNzggNDMxLjI2MSA0NTQuNjI0IDQzMS4yNjFDNTEzLjQ2OSA0MzEuMjYxIDU2My4yNzkgNDc0LjU1NCA1NjUuOTk4IDUzMC4zMzNDNTY4Ljg1NSA1ODguOTEgNTE5LjE1MSA2MzguNiA0NTQuODUzIDYzOC42QzM5MC41NTQgNjM4LjYgMzQwLjczNyA1ODguOTEgMzQzLjQ3MSA1MzAuMzMzSDM0My40NjRaIiBzdHJva2U9IiM2OTY5NjkiIHN0cm9rZS1taXRlcmxpbWl0PSIxMCIvPgo8cGF0aCBkPSJNNjc1LjU5NyA0OTIuNTcySDIyNy4yNkwyMTEuOTExIDY0OS4xOThINjkwLjg0TDY3NS41OTcgNDkyLjU3MloiIGZpbGw9IiM0MDQwNDAiIHN0cm9rZT0iIzY5Njk2OSIgc3Ryb2tlLW1pdGVybGltaXQ9IjEwIi8+CjxwYXRoIGQ9Ik01NTYuMzYyIDU1Ni42NDJIMzUyLjM1M0wzNDguNDMgNjQ5LjIzOEg1NjAuNDUzTDU1Ni4zNjIgNTU2LjY0MloiIHN0cm9rZT0iIzY5Njk2OSIgc3Ryb2tlLW1pdGVybGltaXQ9IjEwIi8+Cjwvc3ZnPg==')] w-[58vw] h-[100vh] relative bg-cover bg-no-repeat p-4  ">
+        
+            <div class="flex  ">
+    
+                <div id="LW" class=" h-full w-full bg-contain bg-center bg-no-repeat flex flex-col items-center mb-8 "  >
+                
+                </div>
+                <div id="ST" class=" h-full w-full bg-contain bg-center bg-no-repeat flex flex-col items-center mb-8 "  >
+                    
+                </div>
+                <div id="RW" class=" h-full w-full bg-contain bg-center bg-no-repeat flex flex-col items-center mt-6"  >
+                    
+                </div>
+        
             
-            <!------------------------------------------------------ end grid ----------------------------------------------------->
             
-            <!------------------------------------------------------ Card Ajout ----------------------------------------------------->
-            <div class="bg-black p-6 rounded-lg shadow-lg w-96">
-                <h2 class="text-2xl font-semibold text-center mb-4 text-green-600">Formulaire de Joueur</h2>
+            </div>
+        <div class=" flex items-center ">
+            <div id="CAM" class=" h-full w-full bg-contain bg-center bg-no-repeat flex flex-col items-center mt-10" >
         
-                <form id="playerForm">
-                    <div class="mb-4">
-                        <label  for="playerName" class="block text-sm font-semibold text-white">Nom du Joueur</label>
-                        <input type="text" id="playerName" name="playerName" class="mt-2 p-2 w-full border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500" placeholder="Entrez le nom" required>
-                    </div>
+    </div>
+      
+       
+            <div id="SDM" class=" h-full w-full bg-contain bg-center bg-no-repeat flex flex-col items-center mb-2 " >
+              
+          </div>
+     
+      
+
+        <div id="CM" class=" h-full w-full bg-contain bg-center bg-no-repeat flex flex-col items-center mt-10" >
+            
+      </div>
+     
+      
+      
+        </div>
+        <div class="flex  ">
+          
+     
+        <div id="LFB" class=" h-full w-full bg-contain bg-center bg-no-repeat flex flex-col items-center" >
+               
+        </div>
+
         
-                    <div class="mb-4">
-                        <label for="nationality" class="block text-sm font-semibold text-white">Nationality</label>
-                        <input type="text" id="nationality" name="nationality" class="mt-2 p-2 w-full border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500" placeholder="Entrez la nationalité" required>
-                    </div>
+      
+        <div id="SW" class=" h-full w-full bg-contain bg-center bg-no-repeat flex flex-col items-center mt-6"  >
+             
+        </div>
+     
+
+    
+        <div id="CB" class=" h-full w-full bg-contain bg-center bg-no-repeat flex flex-col items-center mt-6" >
+          
+        </div>
+        <div id="RFB" class=" h-full w-full bg-contain bg-center bg-no-repeat flex flex-col items-center " >
+            
+        </div>
+    
+      
+        </div>
+        <div class=" relative h-full w-full b    items-end" >
+          
+            
+        <div id="GK" class=" h-full w-full bg-contain bg-center bg-no-repeat flex flex-col items-center  " >
+       
+        </div>
+      
+        </div>
+      </div>
+ <!-- the change cards -->
+<div class=" bg-[#19181C] h-auto w-[30vw] relative mt-9 flex flex-col overflow-scroll ">
+    <div class=" flex justify-around mt-4">
+        <div class="content-center w-[10vw] h-[5vh] text-white  border "> <button class="pl-2 bg-[#19181C]"  id="showFormButton">add a player</button></div>  
+            <div class=" ">
         
-                    <div class="mb-4">
-                        <label for="teamUrl" class="block text-sm font-semibold text-white">Team</label>
-                        <input type="url" id="teamUrl" name="teamUrl" class="mt-2 p-2 w-full border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500" placeholder="Entrez l'URL de l'équipe" required>
-                    </div>
-        
-                    <div class="mb-4">
-                        <label for="position" class="block text-sm font-semibold text-white">Position</label>
-                        <select id="position" class="mt-1 p-2 w-[85%] rounded-md">
-                            <option value="GK">Goalkeeper</option>
-                            <option value="LCB">Left Center Back</option>
-                            <option value="RCB">Right Center Back</option>
-                            <option value="RB">Right Back</option>
-                            <option value="LB">Left Back</option>
-                            <option value="MDC">Central Defensive Midfielder</option>
-                            <option value="LMDC">Left Midfielder</option>
-                            <option value="RMDC">Right Midfielder</option>
-                            <option value="RW">Right Wing</option>
-                            <option value="ST">Striker</option>
-                            <option value="LW">Left Wing</option>
-                        </select>
-                    </div>
-        
-                    <div class="grid grid-cols-2 gap-4 mb-4">
-                        <div class="col-span-1">
-                            <label for="pac" class="block text-sm font-semibold text-white">PAC</label>
-                            <input type="number" id="pac" name="pac" min="1" max="99" class="mt-2 p-2 w-full border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500" placeholder="1-100" required>
-                        </div>
-                        <div class="col-span-1">
-                            <label for="sho" class="block text-sm font-semibold text-white">SHO</label>
-                            <input type="number" id="sho" name="sho" min="1" max="99" class="mt-2 p-2 w-full border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500" placeholder="1-100" required>
-                        </div>
-                        <div class="col-span-1">
-                            <label for="pas" class="block text-sm font-semibold text-white">PAS</label>
-                            <input type="number" id="pas" name="pas" min="1" max="99" class="mt-2 p-2 w-full border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500" placeholder="1-100" required>
-                        </div>
-                        <div class="col-span-1">
-                            <label for="dri" class="block text-sm font-semibold text-white">DRI</label>
-                            <input type="number" id="dri" name="dri" min="1" max="99" class="mt-2 p-2 w-full border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500" placeholder="1-100" required>
-                        </div>
-                        <div class="col-span-1">
-                            <label for="dfe" class="block text-sm font-semibold text-white">DFE</label>
-                            <input type="number" id="dfe" name="dfe" min="1" max="99" class="mt-2 p-2 w-full border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500" placeholder="1-100" required>
-                        </div>
-                        <div class="col-span-1">
-                            <label for="phy" class="block text-sm font-semibold text-white">PHY</label>
-                            <input type="number" id="phy" name="phy" min="1" max="99" class="mt-2 p-2 w-full border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500" placeholder="1-100" required>
-                        </div>
-                    </div>
-        
-                    <div class="flex justify-evenly items-center ">
-                        <button type="submit" id="add" class="w-[90%] mx-1 py-2 bg-gray-500 text-white rounded-lg hover:bg-green-500">Ajouter</button>
-                        <button type="submit" id="cancel" class="w-[90%] mx-1 py-2 bg-gray-500 text-white rounded-lg hover:bg-red-500">Annuler</button>
-                    </div>
+                <form class="  w-[10vw] h-[5vh] ">
+                    <select id="formations" class=" border bg-[#19181C]  text-white text-sm w-[10vw] h-[5vh]   ">
+                    <option selected>4-3-3</option>
+                    </select>
                 </form>
             </div>
-                <!------------------------------------------------------ End Card Ajout ----------------------------------------------------->
-       
     </div>
-    <script src="js/script.js"></script>
+        
+    <div class="flex justify-between">
+   
+    </div>
+
+        <div class="grid grid-cols-3" id="change">
+
+        </div>
+    </div>
+</div>
+
+<!----------------------------------------------------------- formular ------------------------------------------------------>
+<div class="bg-gray-500 w-full max-w-xl mx-auto rounded-lg p-6 mt-10 hidden absolute top-28 right-1" id="myForm">
+    <div class="grid grid-cols-2 md:grid-cols-2 gap-4 content-center">
+        <div>
+            <div class="flex flex-col">
+                <label for="Name" class="mb-1">Name</label>
+                <input type="text" class="w-full p-2 border rounded" id="Name">
+            </div>
+            <div class="flex flex-col">
+                <label for="Photo" class="mb-1">Photo URL</label>
+                <input type="url" class="w-full p-2 border rounded" id="Photo">
+            </div>
+            <div class="flex flex-col">
+                <label for="position" class="block text-white mb-2">Position</label>
+                <select id="position" name="position" class="block w-full p-2 mb-4 border rounded">
+                    <option value="" disabled selected>Select Position</option>
+                    <option value="LW">LW</option>
+                    <option value="ST">ST</option>
+                    <option value="RW">RW</option>
+                    <option value="CAM">CAM</option>
+                    <option value="SDM">SDM</option>
+                    <option value="CM">CM</option>
+                    <option value="LFB">LFB</option>
+                    <option value="SW">SW</option>
+                    <option value="CB">CB</option>
+                    <option value="RFB">RFB</option>s
+                    <option value="GK">GK</option>
+                </select>
+            </div>
+        </div>
+        <div>
+            <div class="flex flex-col">
+                <label for="Nationality" class="mb-1">Nationality URL</label>
+                <input type="URL" class="w-full p-2 border rounded" id="Nationality">
+            </div>
+            <div class="flex flex-col">
+                <label for="club" class="mb-1">Club URL</label>
+                <input type="URL" class="w-full p-2 border rounded" id="club">
+            </div>
+            <div class="flex flex-col">
+                <label for="rating" class="mb-1">Rating</label>
+                <input type="Number" class="w-full p-2 border rounded" id="rating">
+            </div>
+        </div>
+        <div class="flex flex-col">
+            <label for="passing" class="mb-1">Passing</label>
+            <input type="Number" class="w-full p-2 border rounded" id="passing">
+        </div>
+        <div class="flex flex-col">
+            <label for="pace" class="mb-1">Pace</label>
+            <input type="Number" class="w-full p-2 border rounded" id="pace">
+        </div>
+        <div class="flex flex-col">
+            <label for="shooting" class="mb-1">Shooting</label>
+            <input type="Number" class="w-full p-2 border rounded" id="shooting">
+        </div>
+        <div class="flex flex-col">
+            <label for="dribbling" class="mb-1">Dribbling</label>
+            <input type="Number" class="w-full p-2 border rounded" id="dribbling">
+        </div>
+        <div class="flex flex-col">
+            <label for="defending" class="mb-1">Defending</label>
+            <input type="Number" class="w-full p-2 border rounded" id="defending">
+        </div>
+        <div class="flex flex-col">
+            <label for="physical" class="mb-1">Physical</label>
+            <input type="Number" class="w-full p-2 border rounded" id="physical">
+        </div>
+    </div>
+    <div class="flex justify-center gap-3 mt-3">
+        <div id="addPlayerBtn" class="bg-red-950 text-white w-full flex items-center justify-center cursor-pointer">
+            <p class="font-bold text-center h-9 pt-1">Add A Player</p>
+        </div>
+        <div id="closeBtn" class="bg-blue-950 text-white w-full flex items-center justify-center cursor-pointer">
+            <p class="font-bold text-center h-9 pt-1">Close</p>
+        </div>
+    </div>
+</div>
+
+  <section>
+
+    <script src="tailwind.js"></script>
+    <script src="/js/script.js"></script>
 </body>
-
-
-<!-- <footer class="w-full min-h-[250px] pt-4 bg-black grid grid-cols-[30%_30%_40%] grid-rows-[80% 20%] justify-center max-lg:grid-cols-[50%_50%] max-lg:grid-rows-[auto_auto_60px] max-lg:gap-y-5">
+<footer class="w-full min-h-[250px] pt-4 bg-black grid grid-cols-[30%_30%_40%] grid-rows-[80% 20%] justify-center max-lg:grid-cols-[50%_50%] max-lg:grid-rows-[auto_auto_60px] max-lg:gap-y-5">
     <div class="flex flex-col pl-20 max-sm:pl-5">
         <h3 class="text-white font-bold text-xl mb-5">Company</h3>
         <ul class="flex flex-col gap-3 text-[#D4D4D4] font-medium">
@@ -241,5 +242,5 @@
     <div class="col-span-full flex justify-center items-center pt-0">
         <h6 class="text-white text-center">© 2024 Codebenders. All rights reserved</h6>
     </div>
-</footer> -->
-</html>
+</footer>
+</html> 
