@@ -11,7 +11,7 @@ addPlayerBtn.addEventListener('click', (event) => {
   const photoURL = document.getElementById("Photo").value;
   const nationalityURL = document.getElementById("Nationality").value;
   const clubURL = document.getElementById("club").value;
-  const Position = document.getElementById("position").value;
+  const statistiques  = document.getElementById("statistiques ").value;
   const rating = document.getElementById("rating").value;
   const passing = document.getElementById("passing").value;
   const pace = document.getElementById("pace").value;
@@ -26,7 +26,7 @@ addPlayerBtn.addEventListener('click', (event) => {
       editingCard.querySelector(".player-photo").src = photoURL;
       editingCard.querySelector(".player-nationality").src = nationalityURL;
       editingCard.querySelector(".player-club").src = clubURL;
-      editingCard.querySelector(".player-position").textContent = Position;
+      editingCard.querySelector(".player-statistiques ").textContent = statistiques ;
       editingCard.querySelector(".player-pace").textContent = `PAC\n${pace}`;
       editingCard.querySelector(".player-shooting").textContent = `SHO\n${shooting}`;
       editingCard.querySelector(".player-passing").textContent = `PAS\n${passing}`;
@@ -34,8 +34,8 @@ addPlayerBtn.addEventListener('click', (event) => {
       editingCard.querySelector(".player-defending").textContent = `DEF\n${defending}`;
       editingCard.querySelector(".player-physical").textContent = `PHY\n${physical}`;
 
-      // Handle position change
-      const newContainer = document.getElementById(Position);
+      // Handle statistiques  change
+      const newContainer = document.getElementById(statistiques );
       if (newContainer && newContainer !== editingCard.parentNode) {
           // If the new container already has a card, move it back to the change container
           const existingCard = newContainer.querySelector('.player-card');
@@ -43,7 +43,7 @@ addPlayerBtn.addEventListener('click', (event) => {
               changeContainer.appendChild(existingCard);
           }
 
-          // Move the modified card to the new position
+          // Move the modified card to the new statistiques 
           newContainer.appendChild(editingCard);
       }
   } else {
@@ -72,7 +72,7 @@ addPlayerBtn.addEventListener('click', (event) => {
                         <p class="player-physical">PHY <br>${physical}</p>
                     </div>
                     <div>
-                        <p class="text-white font-semibold flex h-full w-[7vw] text-[10px] justify-center player-position">${Position}</p>
+                        <p class="text-white font-semibold flex h-full w-[7vw] text-[10px] justify-center player-statistiques ">${statistiques }</p>
                     </div>
                     <div class="flex gap-1 text-white text-[10px] justify-center mt-3 h-fit">
                         <div><p class="modify-button cursor-pointer">Modify</p></div>
@@ -153,10 +153,10 @@ document.addEventListener('DOMContentLoaded', () => {
           }
       });
 
-      const positionSelect = document.getElementById('position');
-      if (positionSelect.value === '') {
-          positionSelect.classList.add('border-red-500');
-          errorMessages.push('Please select a position');
+      const statistiquesSelect = document.getElementById('statistiques ');
+      if (statistiquesSelect.value === '') {
+        statistiquesSelect.classList.add('border-red-500');
+          errorMessages.push('Please select a statistiques ');
           isValid = false;
       }
 
@@ -223,7 +223,7 @@ document.addEventListener('DOMContentLoaded', () => {
                   const photoURL = playerCard.querySelector(".player-photo").src;
                   const nationalityURL = playerCard.querySelector(".player-nationality").src;
                   const clubURL = playerCard.querySelector(".player-club").src;
-                  const Position = playerCard.querySelector(".player-position").textContent;
+                  const statistiques = playerCard.querySelector(".player-statistiques").textContent;
                   const pace = playerCard.querySelector(".player-pace").textContent.split('\n')[1];
                   const shooting = playerCard.querySelector(".player-shooting").textContent.split('\n')[1];
                   const passing = playerCard.querySelector(".player-passing").textContent.split('\n')[1];
@@ -235,7 +235,7 @@ document.addEventListener('DOMContentLoaded', () => {
                   document.getElementById("Photo").value = photoURL;
                   document.getElementById("Nationality").value = nationalityURL;
                   document.getElementById("club").value = clubURL;
-                  document.getElementById("position").value = Position;
+                  document.getElementById("statistiques").value = statistiques;
                   document.getElementById("passing").value = passing;
                   document.getElementById("pace").value = pace;
                   document.getElementById("shooting").value = shooting;
@@ -255,8 +255,8 @@ document.addEventListener('DOMContentLoaded', () => {
               event.stopPropagation();
               const playerCard = event.target.closest('.player-card');
               if (playerCard) {
-                  const positionId = playerCard.querySelector(".player-position").textContent;
-                  const destinationDiv = document.getElementById(positionId);
+                  const statistiquesId = playerCard.querySelector(".player-statistiques").textContent;
+                  const destinationDiv = document.getElementById(statistiquesId);
                   if (destinationDiv) {
                       const existingCard = destinationDiv.querySelector('.player-card');
                       if (existingCard) {
@@ -264,7 +264,7 @@ document.addEventListener('DOMContentLoaded', () => {
                       }
                       destinationDiv.appendChild(playerCard);
                   } else {
-                      alert(`No position found for ID "${positionId}"`);
+                      alert(`No statistiques found for ID "${statistiquesId}"`);
                   }
               }
           });
@@ -280,7 +280,7 @@ document.addEventListener('DOMContentLoaded', () => {
       const photoURL = document.getElementById("Photo").value;
       const nationalityURL = document.getElementById("Nationality").value;
       const clubURL = document.getElementById("club").value;
-      const Position = document.getElementById("position").value;
+      const statistiques = document.getElementById("statistiques").value;
       const passing = document.getElementById("passing").value;
       const pace = document.getElementById("pace").value;
       const shooting = document.getElementById("shooting").value;
@@ -293,7 +293,7 @@ document.addEventListener('DOMContentLoaded', () => {
           editingCard.querySelector(".player-photo").src = photoURL;
           editingCard.querySelector(".player-nationality").src = nationalityURL;
           editingCard.querySelector(".player-club").src = clubURL;
-          editingCard.querySelector(".player-position").textContent = Position;
+          editingCard.querySelector(".player-statistiques").textContent = statistiques;
           editingCard.querySelector(".player-pace").textContent = `PAC\n${pace}`;
           editingCard.querySelector(".player-shooting").textContent = `SHO\n${shooting}`;
           editingCard.querySelector(".player-passing").textContent = `PAS\n${passing}`;
@@ -301,7 +301,7 @@ document.addEventListener('DOMContentLoaded', () => {
           editingCard.querySelector(".player-defending").textContent = `DEF\n${defending}`;
           editingCard.querySelector(".player-physical").textContent = `PHY\n${physical}`;
 
-          const newContainer = document.getElementById(Position);
+          const newContainer = document.getElementById(statistiques);
           if (newContainer && newContainer !== editingCard.parentNode) {
               const existingCard = newContainer.querySelector('.player-card');
               if (existingCard) {
@@ -317,8 +317,8 @@ document.addEventListener('DOMContentLoaded', () => {
                 <div class="flex flex-col items-center justify-between h-[20vh] mt-1">
                     <div class="flex h-full items-end justify-between"> 
                         <img src="${nationalityURL}" class="h-2 w-4 pl-2 player-nationality" alt=""> 
+                        <img src="${clubURL}" class="h-4 w-6 pr-3 player-club" alt=""> 
                         <img src="${photoURL}" class="w-10 player-photo" alt="">
-                        <img src="${clubURL}" class="h-4 w-6 pr-3 player-club" alt="">                    
                     </div>  
                     <div class="flex text-[8px] mt-1">
                         <p class="text-white font-bold player-name">${playerName}</p>
@@ -333,7 +333,7 @@ document.addEventListener('DOMContentLoaded', () => {
                             <p class="player-physical">PHY <br>${physical}</p>
                         </div>
                         <div>
-                            <p class="text-white font-semibold flex h-full w-[7vw] text-[10px] justify-center player-position">${Position}</p>
+                            <p class="text-white font-semibold flex h-full w-[7vw] text-[10px] justify-center player-statistiques">${statistiques}</p>
                         </div>
                         <div class="flex gap-1 text-white text-[10px] justify-center mt-3 h-fit">
                             <div><p class="modify-button cursor-pointer">Modify</p></div>
