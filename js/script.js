@@ -121,7 +121,7 @@ addPlayerBtn.addEventListener('click', (event) => {
   });
   document.addEventListener('DOMContentLoaded', () => {
     const showFormBtn = document.getElementById("showFormButton");
-    const form = document.getElementById("myForm");
+    const form = document.getElementById("info");
     const addPlayerBtn = document.getElementById("addPlayerBtn");
     const closeBtn = document.getElementById("closeBtn");
     const changeContainer = document.getElementById("change");
@@ -165,8 +165,8 @@ addPlayerBtn.addEventListener('click', (event) => {
             }
   
             if (input.id === 'Name') {
-                const textPattern = /^[a-zA-Z]{3,}$/;
-                if (!textPattern.test(value)) {
+                const textVRF = /^([a-zA-Z]{3,})\s?([a-zA-Z]{3,})$/;
+                if (!textVRF.test(value)) {
                     input.classList.add('border-red-500');
                     errorMessages.push('Name must be at least 3 letters without symbols');
                     isValid = false;
@@ -295,7 +295,8 @@ addPlayerBtn.addEventListener('click', (event) => {
     addPlayerBtn.addEventListener('click', (event) => {
         event.preventDefault();
   
-        // if (!validateForm()) return;
+        if (!validateForm()) 
+            return;
   
         const playerName = document.getElementById("Name").value;
         const photoURL = document.getElementById("Photo").value;

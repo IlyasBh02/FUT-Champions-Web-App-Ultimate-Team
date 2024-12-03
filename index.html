@@ -11,25 +11,14 @@
 </head>
 <body >
     <header>
-        <div class="bg-green-800 h-20 w-full flex justify-around items-center">
+        <div class="bg-blue-900 h-20 w-full flex justify-around items-center">
             <img src="/images/You-Code TEAM.png" class="w-20 h-20 p-1 rounded-[50%]" alt="">
             <div class="flex justify-center items-center   ">
                 <div class="content-center w-[10vw] h-[5vh] text-white  border bg-green-900 rounded-lg  "> 
                     <button class="pl-2"  id="showFormButton">Ajouter un joueur</button>
                 </div>  
-                <form class="  w-[10vw] h-[5vh] ">
-                    <select id="formations" class=" border bg-green-900 rounded-lg text-white text-sm w-[10vw] h-[5vh]   ">
-                        <option selected>4-3-3</option>
-                        <!-- <option selected>4-3-2-1</option>
-                        <option selected>4-4-2</option>
-                        <option selected>3-4-3</option>
-                        <option selected>3-5-2</option>
-                        <option selected>4-4-1</option> -->
-                    </select>
-                </form>
             </div>
         </div>        
-        
     </header>
 
 
@@ -100,6 +89,16 @@
             <div class="content-center w-[10vw] h-[5vh] text-white text-center border bg-green-900 rounded-lg  "> 
                 <p>Les joueurs</p>
             </div>  
+            <form class="  w-[10vw] h-[5vh] ">
+                <select id="formations" class=" border bg-green-900 rounded-lg text-white text-sm w-[10vw] h-[5vh] ">
+                    <option selected>4-3-3</option>
+                    <!-- <option selected>4-3-2-1</option>
+                    <option selected>4-4-2</option>
+                    <option selected>3-4-3</option>
+                    <option selected>3-5-2</option>
+                    <option selected>4-4-1</option> -->
+                </select>
+            </form>
             
         </div>
         <div class="flex justify-between">
@@ -112,8 +111,8 @@
         </div>
     </div>
 
-<!-- the form -->
-<div class="bg-green-500 bg-opacity-50 w-full max-w-xl mx-auto rounded-lg p-6 mt-10 hidden absolute top-28 right-1" id="myForm">
+<!-- Form -->
+<div class="bg-green-500 bg-opacity-50 w-full max-w-xl mx-auto rounded-lg p-6 mt-10 hidden absolute top-28 right-1" id="info">
     <div class="grid grid-cols-2 md:grid-cols-2 gap-4 content-center">
         <div>
             <div class="flex flex-col">
@@ -199,9 +198,9 @@
     <script src="js/script.js"></script>
 </body>
 
-<footer class="w-full min-h-[250px] pt-4 bg-black grid grid-cols-[30%_30%_40%] grid-rows-[80% 20%] justify-center max-lg:grid-cols-[50%_50%] max-lg:grid-rows-[auto_auto_60px] max-lg:gap-y-5">
+<footer class="w-full min-h-[250px] pt-4 bg-blue-900 grid grid-cols-[30%_30%_40%] grid-rows-[80% 20%] justify-center max-lg:grid-cols-[50%_50%] max-lg:grid-rows-[auto_auto_60px] max-lg:gap-y-5">
     <div class="flex flex-col pl-20 max-sm:pl-5">
-        <h3 class="text-white font-bold text-xl mb-5">We have</h3>
+        <h3 class="text-green-500 font-bold text-xl mb-5">We have</h3>
         <ul class="flex flex-col gap-3 text-[#D4D4D4] font-medium">
             <li>Home</li>
             <li>Team</li>
@@ -209,30 +208,28 @@
         </ul>
     </div>
     <div class="flex flex-col">
-        <h3 class="text-white font-bold text-xl mb-5">Payer for VIP</h3>
-        <div class="grid grid-cols-3 w-1/2 payMethod gap-4 max-sm:justify-center max-sm:flex-wrap max-sm:w-[90%]">
-            <img src="../img/bank/paypal.svg" alt="Paypal">
-            <img src="../img/bank/apple-pay.svg" alt="apple">
-            <img src="../img/bank/mastercard.svg" alt="mastercard">
-            <img src="../img/bank/visa.svg" alt="visa">
-            <img src="../img/bank/bitcoin.svg" alt="bitcoin">
-            <img src="../img/bank/payu.svg" alt="payu">
+        <h3 class="text-green-500 font-bold text-xl mb-5">Payer for VIP</h3>
+        <div class="grid grid-cols-2 w-1/2 text-white gap-4 max-sm:justify-center max-sm:flex-wrap max-sm:w-[90%]">
+            <p>Tactique</p>
+            <p>LiveGame</p>
+            <p>Tournament</p>
+            <p>Transfermarkt</p>
         </div>
     </div>
     <div class="flex flex-col gap-y-5 max-lg:col-span-full max-lg:pl-20 max-sm:pl-5">
-        <h3 class="text-white font-bold text-xl">A propos</h3>
+        <h3 class="text-green-500 font-bold text-xl">A propos</h3>
         <p class="w-[70%] text-[#D4D4D4]">
             Lorem ipsum sit amet, consectateur adispicing elit. Fusce euismod concallis velit, eu auctor lacus vehicula sit amet.
         </p>
         <div class="flex gap-3 max-sm:w-full max-sm:justify-center max-sm:pl-[-1.25rem]">
-            <a href="#"><div class="w-14 h-14 bg-[#A6A6A6] flex justify-center items-center hover:scale-105 transition-all duration-400"><i class="fa-brands fa-facebook-f text-white text-3xl"></i></div></a>
-            <a href="#"><div class="w-14 h-14 bg-[#A6A6A6] flex justify-center items-center hover:scale-105 transition-all duration-400"><i class="fa-brands fa-twitter text-white text-3xl"></i></div></a>
-            <a href="#"><div class="w-14 h-14 bg-[#A6A6A6] flex justify-center items-center hover:scale-105 transition-all duration-400"><i class="fa-brands fa-linkedin text-white text-3xl"></i></div></a>
-            <a href="#"><div class="w-14 h-14 bg-[#A6A6A6] flex justify-center items-center hover:scale-105 transition-all duration-400"><i class="fa-brands fa-github text-white text-3xl"></i></div></a>
+            <a href="#"><div class="w-14 h-14 bg-green-900 rounded-3xl flex justify-center items-center hover:scale-105 transition-all duration-400"><i class="fa-brands fa-facebook-f text-white text-3xl"></i></div></a>
+            <a href="#"><div class="w-14 h-14 bg-green-900 rounded-3xl flex justify-center items-center hover:scale-105 transition-all duration-400"><i class="fa-brands fa-twitter text-white text-3xl"></i></div></a>
+            <a href="#"><div class="w-14 h-14 bg-green-900 rounded-3xl flex justify-center items-center hover:scale-105 transition-all duration-400"><i class="fa-brands fa-linkedin text-white text-3xl"></i></div></a>
+            <a href="#"><div class="w-14 h-14 bg-green-900 rounded-3xl flex justify-center items-center hover:scale-105 transition-all duration-400"><i class="fa-brands fa-github text-white text-3xl"></i></div></a>
         </div>
     </div>
     <div class="col-span-full flex justify-center items-center pt-0">
-        <h6 class="text-white text-center">© 2024 Codebenders. All rights reserved</h6>
+        <h6 class="text-green-500 text-center">© 2024 Codebenders. All rights reserved</h6>
     </div>
 </footer>
 </html> 
