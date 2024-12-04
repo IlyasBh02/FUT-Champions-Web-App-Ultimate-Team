@@ -1,147 +1,145 @@
-addPlayerBtn.addEventListener('click', (event) => {
-    event.preventDefault();
-  console.log('clicked')
+AddBtn.addEventListener('click', (event) => {
+event.preventDefault();
 
-    // Validate the form first
-    if (!validateForm()) {
-        return; 
-    }
-    console.log('hello')
-  
-    const playerName = document.getElementById("Name").value;
-    const photoURL = document.getElementById("Photo").value;
-    const nationalityURL = document.getElementById("Nationality").value;
-    const clubURL = document.getElementById("club").value;
-    const statique = document.getElementById("statique").value;
-    const rating = document.getElementById("rating").value;
-    const passing = document.getElementById("passing").value;
-    const pace = document.getElementById("pace").value;
-    const shooting = document.getElementById("shooting").value;
-    const dribbling = document.getElementById("dribbling").value;
-    const defending = document.getElementById("defending").value;
-    const physical = document.getElementById("physical").value;
-  
-    if (editingCard) {
-        /////////////////////////// Update  card /////////////////////////////////
 
-        editingCard.querySelector(".player-name").textContent = playerName;
-        editingCard.querySelector(".player-photo").src = photoURL;
-        editingCard.querySelector(".player-nationality").src = nationalityURL;
-        editingCard.querySelector(".player-club").src = clubURL;
-        editingCard.querySelector(".player-statique").textContent = statique;
-        editingCard.querySelector(".player-pace").textContent = `PAC\n${pace}`;
-        editingCard.querySelector(".player-shooting").textContent = `SHO\n${shooting}`;
-        editingCard.querySelector(".player-passing").textContent = `PAS\n${passing}`;
-        editingCard.querySelector(".player-dribbling").textContent = `DRI\n${dribbling}`;
-        editingCard.querySelector(".player-defending").textContent = `DEF\n${defending}`;
-        editingCard.querySelector(".player-physical").textContent = `PHY\n${physical}`;
+
+if (!validateForm()) {
+    return; 
+}
+// console.log('hello')
+
+
+
+const name = document.getElementById("Name").value;
+const profile = document.getElementById("Photo").value;
+const flag = document.getElementById("Nationality").value;
+const logo = document.getElementById("club").value;
+const statique = document.getElementById("statique").value;
+const rating = document.getElementById("rating").value;
+const pas = document.getElementById("pas").value;
+const pac = document.getElementById("pac").value;
+const shot = document.getElementById("shot").value;
+const drbl = document.getElementById("drbl").value;
+const def = document.getElementById("def").value;
+const phy = document.getElementById("phy").value;
   
-        /////////////////////////// statique change /////////////////////////////////
-        const newContainer = document.getElementById(statique);
-        if (newContainer && newContainer !== editingCard.parentNode) {
-            const existingCard = newContainer.querySelector('.player-card');
-            if (existingCard) {
-                changeContainer.appendChild(existingCard);
-            }
-  
-            newContainer.appendChild(editingCard);
+
+
+if (editPLY) {
+
+    editPLY.querySelector(".player-name").textContent = name;
+    editPLY.querySelector(".player-photo").src = profile;
+    editPLY.querySelector(".player-nationality").src = flag;
+    editPLY.querySelector(".player-club").src = logo;
+    editPLY.querySelector(".player-statique").textContent = statique;
+    editPLY.querySelector(".player-pac").textContent = `PAC\n${pac}`;
+    editPLY.querySelector(".player-shot").textContent = `SHO\n${shot}`;
+    editPLY.querySelector(".player-pas").textContent = `PAS\n${pas}`;
+    editPLY.querySelector(".player-drbl").textContent = `DRI\n${drbl}`;
+    editPLY.querySelector(".player-def").textContent = `DEF\n${def}`;
+    editPLY.querySelector(".player-phy").textContent = `PHY\n${phy}`;
+
+
+    const newContainer = document.getElementById(statique);
+    if (newContainer && newContainer !== editPLY.parentNode) {
+        const OrgCard = newContainer.querySelector('.player-card');
+        if (OrgCard) {
+            changeContainer.appendChild(OrgCard);
         }
-    } else {
-        const playerCard = document.createElement("div");
-        playerCard.className = "bg-[url('badge_total_rush.webp')] h-full w-full bg-contain bg-center bg-no-repeat flex flex-col items-center mt-6 player-card";
-        playerCard.setAttribute("data-unique-id", Date.now()); // Assign unique ID
-        playerCard.innerHTML = `
-            <div>
-              <div class="flex flex-col items-center justify-between h-[20vh] mt-1">
-                  <div class="flex h-full items-end justify-between"> 
-                      <img src="${nationalityURL}" class="h-2 w-4 pl-2 player-nationality" alt=""> 
-                      <img src="${photoURL}" class="w-10 player-photo" alt="">
-                      <img src="${clubURL}" class="h-4 w-6 pr-3 player-club" alt="">                    
-                  </div>  
-                  <div class="flex text-[8px] mt-1">
-                      <p class="text-white font-bold player-name">${playerName}</p>
-                  </div>
-                  <div class="flex flex-col items-center">
-                      <div class="flex h-full w-[5vw] text-[5px] justify-between text-white font-semibold">
-                          <p class="player-pace">PAC <br>${pace}</p>
-                          <p class="player-shooting">SHO <br>${shooting}</p>
-                          <p class="player-passing">PAS <br>${passing}</p>
-                          <p class="player-dribbling">DRI <br>${dribbling}</p>
-                          <p class="player-defending">DEF <br>${defending}</p>
-                          <p class="player-physical">PHY <br>${physical}</p>
-                      </div>
-                      <div>
-                          <p class="text-white font-semibold flex h-full w-[7vw] text-[10px] justify-center player-statique">${statique}</p>
-                      </div>
-                      <div class="flex gap-1 text-white text-[10px] justify-center mt- h-fit">
-    <div>
-        <p class="modify-button cursor-pointer">
-            <!-- Modify icon (SVG) -->
-            <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2">
-                <path stroke-linecap="round" stroke-linejoin="round" d="M16 2l6 6-10 10H6v-6L16 2z"></path>
-            </svg>
-        </p>
-    </div>
-    <div>
-        <p class="delete-button cursor-pointer">
-            <!-- Delete icon (SVG) -->
-            <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2">
-                <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12"></path>
-            </svg>
-        </p>
-    </div>
-    <div>
-        <p class="play-button cursor-pointer">
-            <!-- Play icon (SVG) -->
-            <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2">
-                <path stroke-linecap="round" stroke-linejoin="round" d="M5 3v18l14-9-14-9z"></path>
-            </svg>
-        </p>
-    </div>
-</div>
 
-                  </div>
-              </div>
-          </div>
+        newContainer.appendChild(editPLY);
+    }
+} else {
+    const playerCard = document.createElement("div");
+    playerCard.className = "bg-[url('badge_total_rush.webp')] h-full w-full bg-contain bg-center bg-no-repeat flex flex-col items-center mt-6 player-card";
+    playerCard.setAttribute("data-unique-id", Date.now()); 
+    playerCard.innerHTML = `
+        <div>
+            <div class="flex flex-col items-center justify-between h-[20vh] mt-1">
+                <div class="flex h-full items-end justify-between"> 
+                    <img src="${flag}" class="h-2 w-4 pl-2 player-nationality" alt=""> 
+                    <img src="${profile}" class="w-10 player-photo" alt="">
+                    <img src="${logo}" class="h-4 w-6 pr-3 player-club" alt="">                    
+                </div>  
+                <div class="flex text-[8px] mt-1">
+                    <p class="text-white font-bold player-name">${name}</p>
+                </div>
+                <div class="flex flex-col items-center">
+                    <div class="flex h-full w-[5vw] text-[5px] justify-between text-white font-semibold">
+                        <p class="player-pac">PAC <br>${pac}</p>
+                        <p class="player-shot">SHO <br>${shot}</p>
+                        <p class="player-pas">PAS <br>${pas}</p>
+                        <p class="player-drbl">DRI <br>${drbl}</p>
+                        <p class="player-def">DEF <br>${def}</p>
+                        <p class="player-phy">PHY <br>${phy}</p>
+                    </div>
+                    <div>
+                        <p class="text-white font-semibold flex h-full w-[7vw] text-[10px] justify-center player-statique">${statique}</p>
+                    </div>
+                    <div class="flex gap-1 text-white text-[10px] justify-center mt- h-fit">
+                        <div>
+                            <p class="modifier-button cursor-pointer">
+                                <!-- modifier icon (SVG) -->
+                                <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2">
+                                    <path stroke-linecap="round" stroke-linejoin="round" d="M16 2l6 6-10 10H6v-6L16 2z"></path>
+                                </svg>
+                            </p>
+                        </div>
+                        <div>
+                            <p class="delete-button cursor-pointer">
+                                <!-- Delete icon (SVG) -->
+                                <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2">
+                                    <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12"></path>
+                                </svg>
+                            </p>
+                        </div>
+                        <div>
+                            <p class="play-button cursor-pointer">
+                                <!-- Play icon (SVG) -->
+                                <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2">
+                                    <path stroke-linecap="round" stroke-linejoin="round" d="M5 3v18l14-9-14-9z"></path>
+                                </svg>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
         `;
   
-        // Add event listeners to the new card
-        addCardButtonListeners(playerCard);
+    addCardButtonListeners(playerCard);
+
+    changeContainer.appendChild(playerCard);
+}
   
-        // Append the new card to the container with id "change"
-        changeContainer.appendChild(playerCard);
-    }
-  
-    // Hide the form and reset it
     form.classList.add("hidden");
-    resetForm(); // Manually reset the form fields
-    
-    // Optionally, show a success message
-    alert('Player added/updated successfully!');
-  });
-  document.addEventListener('DOMContentLoaded', () => {
+    resetForm(); 
+
+    alert('le joueur est bien ajouté !');
+    });
+
+    document.addEventListener('DOMContentLoaded', () => {
     const showFormBtn = document.getElementById("showFormButton");
     const form = document.getElementById("info");
-    const addPlayerBtn = document.getElementById("addPlayerBtn");
+    const AddBtn = document.getElementById("AddBtn");
     const closeBtn = document.getElementById("closeBtn");
     const changeContainer = document.getElementById("change");
   
-    let editingCard = null;
+    let editPLY = null;
   
-    // Validation function
     function validateForm() {
         const inputs = form.querySelectorAll('input');
         let isValid = true;
         const errorMessages = [];
   
-        inputs.forEach(input => input.classList.remove('border-red-500'));
+        inputs.forEach(input => input.classList.remove('border-red-900'));
   
         inputs.forEach(input => {
             const value = input.value.trim();
   
             if (value === '') {
-                input.classList.add('border-red-500');
-                errorMessages.push(`${input.previousElementSibling.textContent} is required`);
+                input.classList.add('border-red-900');
+                errorMessages.push(`${input.previousElementSibling.textContent} erreur`);
                 isValid = false;
                 return;
             }
@@ -149,8 +147,8 @@ addPlayerBtn.addEventListener('click', (event) => {
             if (input.type === 'url') {
                 const urlPattern = /^(https?:\/\/)?([\da-z\.-]+)\.([a-z\.]{2,6})([\/\w \.-]*)*\/?$/;
                 if (!urlPattern.test(value)) {
-                    input.classList.add('border-red-500');
-                    errorMessages.push(`Please enter a valid URL for ${input.previousElementSibling.textContent}`);
+                    input.classList.add('border-red-900');
+                    errorMessages.push(`Veriffie le URL ${input.previousElementSibling.textContent}`);
                     isValid = false;
                 }
             }
@@ -158,8 +156,8 @@ addPlayerBtn.addEventListener('click', (event) => {
             if (input.type === 'number') {
                 const numValue = parseFloat(value);
                 if (isNaN(numValue) || numValue < 1 || numValue > 100) {
-                    input.classList.add('border-red-500');
-                    errorMessages.push(`${input.previousElementSibling.textContent}entre 1-100`);
+                    input.classList.add('border-red-900');
+                    errorMessages.push(`${input.previousElementSibling.textContent}statique entre 1 et 100`);
                     isValid = false;
                 }
             }
@@ -167,8 +165,8 @@ addPlayerBtn.addEventListener('click', (event) => {
             if (input.id === 'Name') {
                 const textVRF = /^([a-zA-Z]{3,})\s?([a-zA-Z]{3,})$/;
                 if (!textVRF.test(value)) {
-                    input.classList.add('border-red-500');
-                    errorMessages.push('Name must be at least 3 letters without symbols');
+                    input.classList.add('border-red-900');
+                    errorMessages.push('vérifier le nome');
                     isValid = false;
                 }
             }
@@ -176,7 +174,7 @@ addPlayerBtn.addEventListener('click', (event) => {
   
         const statiqueSelect = document.getElementById('statique');
         if (statiqueSelect.value === '') {
-            statiqueSelect.classList.add('border-red-500');
+            statiqueSelect.classList.add('border-red-900');
             errorMessages.push('Please select a statique');
             isValid = false;
         }
@@ -204,7 +202,6 @@ addPlayerBtn.addEventListener('click', (event) => {
     }
   
     const resetForm = () => {
-        // form.reset();
         const errorContainer = document.getElementById('errorMessages');
         if (errorContainer) {
             errorContainer.innerHTML = '';
@@ -213,7 +210,7 @@ addPlayerBtn.addEventListener('click', (event) => {
   
     showFormBtn.addEventListener('click', () => {
         form.classList.remove("hidden");
-        editingCard = null;
+        editPLY = null;
         resetForm();
     });
   
@@ -234,38 +231,38 @@ addPlayerBtn.addEventListener('click', (event) => {
             });
         }
   
-        const modifyBtn = cardElement.querySelector('.modify-button');
-        if (modifyBtn) {
-            modifyBtn.addEventListener('click', (event) => {
+        const modifierBtn = cardElement.querySelector('.modifier-button');
+        if (modifierBtn) {
+            modifierBtn.addEventListener('click', (event) => {
                 event.stopPropagation();
                 const playerCard = event.target.closest('.player-card');
                 if (playerCard) {
-                    const playerName = playerCard.querySelector(".player-name").textContent;
-                    const photoURL = playerCard.querySelector(".player-photo").src;
-                    const nationalityURL = playerCard.querySelector(".player-nationality").src;
-                    const clubURL = playerCard.querySelector(".player-club").src;
+                    const name = playerCard.querySelector(".player-name").textContent;
+                    const profile = playerCard.querySelector(".player-photo").src;
+                    const flag = playerCard.querySelector(".player-nationality").src;
+                    const logo = playerCard.querySelector(".player-club").src;
                     const statique = playerCard.querySelector(".player-statique").textContent;
-                    const pace = playerCard.querySelector(".player-pace").textContent.split('\n')[1];
-                    const shooting = playerCard.querySelector(".player-shooting").textContent.split('\n')[1];
-                    const passing = playerCard.querySelector(".player-passing").textContent.split('\n')[1];
-                    const dribbling = playerCard.querySelector(".player-dribbling").textContent.split('\n')[1];
-                    const defending = playerCard.querySelector(".player-defending").textContent.split('\n')[1];
-                    const physical = playerCard.querySelector(".player-physical").textContent.split('\n')[1];
+                    const pac = playerCard.querySelector(".player-pac").textContent.split('\n')[1];
+                    const shot = playerCard.querySelector(".player-shot").textContent.split('\n')[1];
+                    const pas = playerCard.querySelector(".player-pas").textContent.split('\n')[1];
+                    const drbl = playerCard.querySelector(".player-drbl").textContent.split('\n')[1];
+                    const def = playerCard.querySelector(".player-def").textContent.split('\n')[1];
+                    const phy = playerCard.querySelector(".player-phy").textContent.split('\n')[1];
   
-                    document.getElementById("Name").value = playerName;
-                    document.getElementById("Photo").value = photoURL;
-                    document.getElementById("Nationality").value = nationalityURL;
-                    document.getElementById("club").value = clubURL;
+                    document.getElementById("Name").value = name;
+                    document.getElementById("Photo").value = profile;
+                    document.getElementById("Nationality").value = flag;
+                    document.getElementById("club").value = logo;
                     document.getElementById("statique").value = statique;
-                    document.getElementById("passing").value = passing;
-                    document.getElementById("pace").value = pace;
-                    document.getElementById("shooting").value = shooting;
-                    document.getElementById("dribbling").value = dribbling;
-                    document.getElementById("defending").value = defending;
-                    document.getElementById("physical").value = physical;
+                    document.getElementById("pas").value = pas;
+                    document.getElementById("pac").value = pac;
+                    document.getElementById("shot").value = shot;
+                    document.getElementById("drbl").value = drbl;
+                    document.getElementById("def").value = def;
+                    document.getElementById("phy").value = phy;
   
                     form.classList.remove("hidden");
-                    editingCard = playerCard;
+                    editPLY = playerCard;
                 }
             });
         }
@@ -279,57 +276,57 @@ addPlayerBtn.addEventListener('click', (event) => {
                     const statiqueId = playerCard.querySelector(".player-statique").textContent;
                     const destinationDiv = document.getElementById(statiqueId);
                     if (destinationDiv) {
-                        const existingCard = destinationDiv.querySelector('.player-card');
-                        if (existingCard) {
-                            changeContainer.appendChild(existingCard);
+                        const OrgCard = destinationDiv.querySelector('.player-card');
+                        if (OrgCard) {
+                            changeContainer.appendChild(OrgCard);
                         }
                         destinationDiv.appendChild(playerCard);
                     } else {
-                        alert(`No statique found for ID "${statiqueId}"`);
+                        alert(`Veriffier ID "${statiqueId}"`);
                     }
                 }
             });
         }
     }
   
-    addPlayerBtn.addEventListener('click', (event) => {
+    AddBtn.addEventListener('click', (event) => {
         event.preventDefault();
   
         if (!validateForm()) 
             return;
   
-        const playerName = document.getElementById("Name").value;
-        const photoURL = document.getElementById("Photo").value;
-        const nationalityURL = document.getElementById("Nationality").value;
-        const clubURL = document.getElementById("club").value;
+        const name = document.getElementById("Name").value;
+        const profile = document.getElementById("Photo").value;
+        const flag = document.getElementById("Nationality").value;
+        const logo = document.getElementById("club").value;
         const statique = document.getElementById("statique").value;
-        const passing = document.getElementById("passing").value;
-        const pace = document.getElementById("pace").value;
-        const shooting = document.getElementById("shooting").value;
-        const dribbling = document.getElementById("dribbling").value;
-        const defending = document.getElementById("defending").value;
-        const physical = document.getElementById("physical").value;
+        const pas = document.getElementById("pas").value;
+        const pac = document.getElementById("pac").value;
+        const shot = document.getElementById("shot").value;
+        const drbl = document.getElementById("drbl").value;
+        const def = document.getElementById("def").value;
+        const phy = document.getElementById("phy").value;
   
-        if (editingCard) {
-            editingCard.querySelector(".player-name").textContent = playerName;
-            editingCard.querySelector(".player-photo").src = photoURL;
-            editingCard.querySelector(".player-nationality").src = nationalityURL;
-            editingCard.querySelector(".player-club").src = clubURL;
-            editingCard.querySelector(".player-statique").textContent = statique;
-            editingCard.querySelector(".player-pace").textContent = `PAC\n${pace}`;
-            editingCard.querySelector(".player-shooting").textContent = `SHO\n${shooting}`;
-            editingCard.querySelector(".player-passing").textContent = `PAS\n${passing}`;
-            editingCard.querySelector(".player-dribbling").textContent = `DRI\n${dribbling}`;
-            editingCard.querySelector(".player-defending").textContent = `DEF\n${defending}`;
-            editingCard.querySelector(".player-physical").textContent = `PHY\n${physical}`;
+        if (editPLY) {
+            editPLY.querySelector(".player-name").textContent = name;
+            editPLY.querySelector(".player-photo").src = profile;
+            editPLY.querySelector(".player-nationality").src = flag;
+            editPLY.querySelector(".player-club").src = logo;
+            editPLY.querySelector(".player-statique").textContent = statique;
+            editPLY.querySelector(".player-pac").textContent = `PAC\n${pac}`;
+            editPLY.querySelector(".player-shot").textContent = `SHO\n${shot}`;
+            editPLY.querySelector(".player-pas").textContent = `PAS\n${pas}`;
+            editPLY.querySelector(".player-drbl").textContent = `DRI\n${drbl}`;
+            editPLY.querySelector(".player-def").textContent = `DEF\n${def}`;
+            editPLY.querySelector(".player-phy").textContent = `PHY\n${phy}`;
   
             const newContainer = document.getElementById(statique);
-            if (newContainer && newContainer !== editingCard.parentNode) {
-                const existingCard = newContainer.querySelector('.player-card');
-                if (existingCard) {
-                    changeContainer.appendChild(existingCard);
+            if (newContainer && newContainer !== editPLY.parentNode) {
+                const OrgCard = newContainer.querySelector('.player-card');
+                if (OrgCard) {
+                    changeContainer.appendChild(OrgCard);
                 }
-                newContainer.appendChild(editingCard);
+                newContainer.appendChild(editPLY);
             }
         } else {
             const playerCard = document.createElement("div");
@@ -338,29 +335,29 @@ addPlayerBtn.addEventListener('click', (event) => {
                 <div>
                   <div class="flex flex-col items-center justify-between h-[20vh] mt-1">
                       <div class="flex h-full items-end justify-between"> 
-                          <img src="${nationalityURL}" class="h-2 w-4 pl-2 player-nationality" alt=""> 
-                          <img src="${photoURL}" class="w-10 player-photo" alt="">
-                          <img src="${clubURL}" class="h-4 w-6 pr-3 player-club" alt="">                    
+                          <img src="${flag}" class="h-2 w-4 pl-2 player-nationality" alt=""> 
+                          <img src="${profile}" class="w-10 player-photo" alt="">
+                          <img src="${logo}" class="h-4 w-6 pr-3 player-club" alt="">                    
                       </div>  
                       <div class="flex text-[8px] mt-1">
-                          <p class="text-white font-bold player-name">${playerName}</p>
+                          <p class="text-white font-bold player-name">${name}</p>
                       </div>
                       <div class="flex flex-col items-center">
                           <div class="flex h-full w-[5vw] text-[5px] justify-between text-white font-semibold">
-                              <p class="player-pace">PAC <br>${pace}</p>
-                              <p class="player-shooting">SHO <br>${shooting}</p>
-                              <p class="player-passing">PAS <br>${passing}</p>
-                              <p class="player-dribbling">DRI <br>${dribbling}</p>
-                              <p class="player-defending">DEF <br>${defending}</p>
-                              <p class="player-physical">PHY <br>${physical}</p>
+                              <p class="player-pac">PAC <br>${pac}</p>
+                              <p class="player-shot">SHO <br>${shot}</p>
+                              <p class="player-pas">PAS <br>${pas}</p>
+                              <p class="player-drbl">DRI <br>${drbl}</p>
+                              <p class="player-def">DEF <br>${def}</p>
+                              <p class="player-phy">PHY <br>${phy}</p>
                           </div>
                           <div>
                               <p class="text-white font-semibold flex h-full w-[7vw] text-[10px] justify-center player-statique">${statique}</p>
                           </div>
                           <div class="flex gap-1 text-white text-[10px] justify-center mt- h-fit">
                             <div>
-                                <p class="modify-button cursor-pointer">
-                                    <!-- Modify icon (SVG) -->
+                                <p class="modifier-button cursor-pointer">
+                                    <!-- modifier icon (SVG) -->
                                     <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2">
                                         <path stroke-linecap="round" stroke-linejoin="round" d="M16 2l6 6-10 10H6v-6L16 2z"></path>
                                     </svg>

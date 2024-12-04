@@ -1,8 +1,0 @@
-// {
-//   "devDependencies": {
-//     "tailwindcss": "^3.4.15"
-//   },
-//   "scripts": {
-//     "goal":"npx tailwindcss -i ./src/input.css -o ./src/output.css --watch"
-//   }
-// }
